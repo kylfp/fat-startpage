@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fat Tyre - Startpage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body-foreground">
+            <div class="information">
+                <div class="row-1">
+                    <div class="clock" id="clock-widget">00:00:00</div>
+                    <div class="temp-image">
+                        <div id="temp">00°F</div>
+                        <img id="weather-image" src="weather_icons/clear_day.png" alt="weather image" />
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="date" id="date-widget">00JAN00</div>
+                    <div class="weather-desc-other">
+                        <div class="weather-description" id="weather-description">Description</div>
+                        <button onclick="weatherDropdown()" class="dropbtn">Expand</button>
+                        <div id="weather-dropdown" class="weather-dropdown">
+                            <p class="feels-like" id="feels-like">00°F</p>
+                            <p class="highlow-temp" id="highlow-temp">00°F / 00°F</p>
+                            <p class="humidity" id="humidity">Humidity: 00%</p>
+                            <p class="wind" id="wind">Wind: 00mph North</p>
+                            <p class="sunrise" id="sunrise">Sunrise: 00:00</p>
+                            <p class="sunset" id="sunset">Sunset: 00:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <form method="get" action="https://search.brave.com/search?q={}">
+                    <input class="searchbox" type="text" placeholder="Brave Search" name="q" value="" />
+                    <input class="search-button" type="submit" value="Brave" />
+                </form>
+            </div>
+            <div class="bookmarks">
+                <div class="media-bookmarks">
+                    <div class="header">MEDIA</div>
+                    <div class="bookmark-list">
+                        <div class"bookmark"><a href="https://mail.proton.me/u/1/inbox">Proton Mail</a></div>
+                        <div class"bookmark"><a href="https://drive.proton.me/u/1/So9-jMG7MYv4Aowd57TZde7jrTirPfutR_scCh9ZdsrgCg1mS57mDpqJbuctKfWCKAW6wlzLKgNiB3PpLorEbw==/folder/_5FFaUm3FSrKbpbdiUR63OXDcylDpTIP0QIKQpUdLD40bv5p6zv7zZzXl2DL_81ZzCxslbAX2SWk4So-Jjxh2w==">Proton Drive</a></div>
+                        <div class"bookmark"><a href="https://mail.google.com/">GMail</a></div>
+                        <div class"bookmark"><a href="https://www.reddit.com/">Reddit</a></div>
+                        <div class"bookmark"><a href="https://www.youtube.com/">YouTube</a></div>
+                        <div class"bookmark"><a href="https://www.espn.com/nba/scoreboard">NBA ESPN</a></div>
+                        <div class"bookmark"><a href="https://www.facebook.com/">Facebook</a></div>
+                    </div>
+                </div>
+                <div class="tech-dev-bookmarks">
+                    <div class="header">TECH/DEV</div>
+                    <div class="bookmark-list">
+                        <div class"bookmark"><a href="https://github.com/">Github</a></div>
+                        <div class"bookmark"><a href="https://learn.umgc.edu/d2l/home">UMGC</a></div>
+                        <div class"bookmark"><a href="https://www.nerdfonts.com/cheat-sheet">Nerd Fonts</a></div>
+                        <div class"bookmark"><a href="https://t2linux.org/">T2 Linux</a></div>
+                        <div class"bookmark"><a href="https://calyxos.org/">Calyx OS</a></div>
+                    </div>
+                </div>
+                <div class="gaming-bookmarks">
+                    <div class="header">GAMING</div>
+                    <div class="bookmark-list">
+                        <div class"bookmark"><a href="https://www.protondb.com/">Proton DB</a></div>
+                        <div class"bookmark"><a href="https://www.op.gg/">OP.GG</a></div>
+                        <div class"bookmark"><a href="https://terraria.fandom.com/wiki/Terraria_Wiki">Terreria Wiki</a></div>
+                    </div>
+                </div>
+                <div class="finance-bookmarks">
+                    <div class="header">FINANCE</div>
+                    <div class="bookmark-list">
+                        <div class"bookmark"><a href="https://digitalapps.navyfederal.org/signin/">Navy Federal</a></div>
+                        <div class"bookmark"><a href="https://client.schwab.com/Login/SignOn/CustomerCenterLogin.aspx">Schwab</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
