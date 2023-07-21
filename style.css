@@ -146,7 +146,7 @@ body {
 .weather-desc-other {
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
     width: 25vw;
     height: 5vh;
 }
@@ -158,45 +158,48 @@ body {
     font-size: 2vw;
 }
 
+.weather-dropdown {
+    height: 5vh;
+}
+
 .dropbtn {
+    height: 5vh;
     font-weight: bold;
     color: #c0caf5;
     background-color: #1a1b26;
     font-size: 2vw;
-    border: solid;
-    border-color: #c0caf5;
-    border-width: 5px;
+    border: solid 4px #c0caf5;
     border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
 }
-
-.dropbtn:hover, .dropbtn:focus {
-    transform: scale(1.1);
+.dropbtn img {
+    height: 4vh;
 }
 
-.weather-dropdown {
+.dropdown-menu {
+    width: 15vw;
     display: none;
     position: absolute;
-    bottom: 42vh;
-    right: 19vw;
     background-color: #1a1b26;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(26,27,38,0.2);
-    z-index: 1;
-    border: solid;
-    border-color: #c0caf5;
+    border: solid 5px #c0caf5;
     border-radius: 5px;
+    transition: height .4s ease;
 }
 
-.weather-dropdown p {
-    color: #c0caf5;
-    padding: 12px 16px;
-    display: block;
+.dropdown-menu p {
+    font-size: 1vw;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.other-weather a:hover {background-color: #ddd;}
-
-.show {display: block;}
+.weather-dropdown:hover .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* ######################################################################### */
 /* # SEARCH BAR                                                            # */
@@ -204,7 +207,7 @@ body {
 .search {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 51vw;
     height: 5vh;
     font-weight: bold;
@@ -212,10 +215,9 @@ body {
 
 .searchbox {
     width: 40vw;
-    height: 3vh;
+    height: 5vh;
     color: #c0caf5;
     background-color: #1a1b26;
-    size: 50;
 
     border: solid;
     border-color: #c0caf5;
@@ -224,20 +226,13 @@ body {
 }
 
 .searchbox[type=text] {
-    font-size: 1vw;
+    font-size: 1.75vw;
     font-weight: bold;
+    text-align: center;
 }
 
-.search-button {
-    width: 10vw;
-    height: 3vh;
-    background-color: #c0caf5;
-    font-size: 1vw;
-    font-weight: bold;
-    border: solid;
-    border-color: #c0caf5;
-    border-width: 3px;
-    border-radius: 5px;
+.searchbox:focus {
+    outline: 5px solid #bb9af7;
 }
 
 /* ######################################################################### */

@@ -20,6 +20,18 @@
                     <div class="date" id="date-widget">00JAN00</div>
                     <div class="weather-desc-other">
                         <div class="weather-description" id="weather-description">Description</div>
+                        <div class="weather-dropdown">
+                            <button class="dropbtn"><img src="menu_icons/down_colored.png" /></button>
+                            <div class="dropdown-menu" id="dropdown-menu">
+                                <p class="feels-like" id="feels-like">00°F</p>
+                                <p class="highlow-temp" id="highlow-temp">00°F / 00°F</p>
+                                <p class="humidity" id="humidity">Humidity: 00%</p>
+                                <p class="wind" id="wind">Wind: 00mph North</p>
+                                <p class="sunrise" id="sunrise">Sunrise: 00:00</p>
+                                <p class="sunset" id="sunset">Sunset: 00:00</p>
+                            </div>
+                        </div>
+                        <!--
                         <button onclick="weatherDropdown()" class="dropbtn">Expand</button>
                         <div id="weather-dropdown" class="weather-dropdown">
                             <p class="feels-like" id="feels-like">00°F</p>
@@ -29,13 +41,13 @@
                             <p class="sunrise" id="sunrise">Sunrise: 00:00</p>
                             <p class="sunset" id="sunset">Sunset: 00:00</p>
                         </div>
+-->
                     </div>
                 </div>
             </div>
             <div class="search">
                 <form method="get" action="https://search.brave.com/search?q={}">
                     <input class="searchbox" type="text" placeholder="Brave Search" name="q" value="" />
-                    <input class="search-button" type="submit" value="Brave" />
                 </form>
             </div>
             <div class="bookmarks">
