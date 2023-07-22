@@ -18,12 +18,6 @@ function showClock() {
 
     let currentTime = hour + ":" + minute + ":" + second;
     let currentDate = day + "-" + monthToLetters(month) + "-" + year.slice(2);
-    console.log(hour);
-    console.log(minute);
-    console.log(day);
-    console.log(monthToLetters(month));
-    console.log(year);
-
 
     document.getElementById("clock-widget").innerHTML = currentTime;
     document.getElementById("date-widget").innerHTML = currentDate;
