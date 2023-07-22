@@ -1,26 +1,4 @@
 // ######################################################################### //
-// WEATHER DROPDOWN
-// ######################################################################### //
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function weatherDropdown() {
-  document.getElementById("weather-dropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("weather-dropdown");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-// ######################################################################### //
 // CLOCK FUNCTION
 // ######################################################################### //
 function showClock() {
@@ -29,7 +7,7 @@ function showClock() {
     let minute = time.getMinutes();
     let second = time.getSeconds();
 
-    let day = time.getDay();
+    let day = time.getDate();
     let month = time.getMonth();
     let year = "" + time.getFullYear();
 
@@ -40,6 +18,11 @@ function showClock() {
 
     let currentTime = hour + ":" + minute + ":" + second;
     let currentDate = day + "-" + monthToLetters(month) + "-" + year.slice(2);
+    console.log(hour);
+    console.log(minute);
+    console.log(day);
+    console.log(monthToLetters(month));
+    console.log(year);
 
 
     document.getElementById("clock-widget").innerHTML = currentTime;
@@ -56,7 +39,7 @@ function monthToLetters (month) {
         "JAN", "FEB", "MAR", "APRIL", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT",
         "NOV", "DEC"
     ]
-    return monthList[month - 1]
+    return monthList[month]
 }
 
 setInterval(showClock, 1000);
