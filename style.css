@@ -62,8 +62,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #c0caf5;
-    background-color: #16161e;
+    color: #a0a8b7;
+    background-color: #1f2329;
     font-family: "Titilium", sans-serif;
     font-weight: bold;
 }
@@ -78,10 +78,10 @@ body {
     align-items: center;
     width: 98vw;
     height: 98vh;
-    background-color: #1a1b26;
+    background-color: #1f2329;
     border-style: solid;
     border-width: 5px;
-    border-color: #c0caf5;
+    border-color: #a0a8b7;
     border-radius: 5px;
 }
 
@@ -165,10 +165,10 @@ body {
 .dropbtn {
     height: 5vh;
     font-weight: bold;
-    color: #c0caf5;
-    background-color: #1a1b26;
+    color: #a0a8b7;
+    background-color: #1f2329;
     font-size: 2vw;
-    border: solid 4px #c0caf5;
+    border: solid 4px #a0a8b7;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
@@ -181,8 +181,8 @@ body {
     width: 15vw;
     display: none;
     position: absolute;
-    background-color: #1a1b26;
-    border: solid 5px #c0caf5;
+    background-color: #1f2329;
+    border: solid 5px #a0a8b7;
     border-radius: 5px;
     transition: height .4s ease;
 }
@@ -216,11 +216,11 @@ body {
 .searchbox {
     width: 40vw;
     height: 5vh;
-    color: #c0caf5;
-    background-color: #1a1b26;
+    color: #a0a8b7;
+    background-color: #1f2329;
 
     border: solid;
-    border-color: #c0caf5;
+    border-color: #a0a8b7;
     border-width: 3px;
     border-radius: 5px;
 }
@@ -232,7 +232,7 @@ body {
 }
 
 .searchbox:focus {
-    outline: 5px solid #bb9af7;
+    outline: 5px solid #bf68d9;
 }
 
 /* ######################################################################### */
@@ -243,8 +243,8 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 75vw;
-    height: 30vh;
-    color: #1e1f2c;
+    height: 35vh;
+    color: #1f2329;
 }
 
 .header {
@@ -285,7 +285,7 @@ a:link {
 
 a:hover {
     transform: scale(1.1);
-    background-color: #c0caf5;
+    background-color: #a0a8b7;
 }
 
 .media-bookmarks {
@@ -294,12 +294,12 @@ a:hover {
     justify-content: flex-start;
     row-gap: 1vh;
     width: 15vw;
-    height: 25vh;
+    height: 30vh;
     border-style: solid;
     border-width: 5px;
     border-radius: 5px;
-    border-color: #c0caf5;
-    background-color: #f7768e;
+    border-color: #a0a8b7;
+    background-color: #e55561;
 }
 
 .tech-dev-bookmarks {
@@ -308,12 +308,12 @@ a:hover {
     justify-content: flex-start;
     row-gap: 1vh;
     width: 15vw;
-    height: 25vh;
+    height: 30vh;
     border-style: solid;
     border-width: 3px;
     border-radius: 5px;
-    border-color: #c0caf5;
-    background-color: #9ece6a;
+    border-color: #a0a8b7;
+    background-color: #8ebd6b;
 }
 
 .gaming-bookmarks {
@@ -322,12 +322,12 @@ a:hover {
     justify-content: flex-start;
     row-gap: 1vh;
     width: 15vw;
-    height: 25vh;
+    height: 30vh;
     border-style: solid;
     border-width: 3px;
     border-radius: 5px;
-    border-color: #c0caf5;
-    background-color: #e0af68;
+    border-color: #a0a8b7;
+    background-color: #e2b86b;
 }
 
 .finance-bookmarks {
@@ -336,11 +336,10 @@ a:hover {
     justify-content: flex-start;
     row-gap: 1vh;
     width: 15vw;
-    height: 25vh;
+    height: 30vh;
     border-style: solid;
     border-width: 3px;
     border-radius: 5px;
-    border-color: #c0caf5;
-    background-color: #7aa2f7;
+    border-color: #a0a8b7;
+    background-color: #4fa6ed;
 }
-
