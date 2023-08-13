@@ -130,7 +130,7 @@ body {
 
 .row-2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
 }
 
