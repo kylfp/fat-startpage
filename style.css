@@ -130,7 +130,7 @@ body {
 
 .row-2 {
     display: flex;
-    justify-content: center;
+    justify-content: space between;
     align-items: baseline;
 }
 
@@ -145,7 +145,7 @@ body {
 
 .weather-desc-other {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 25vw;
     height: 5vh;
