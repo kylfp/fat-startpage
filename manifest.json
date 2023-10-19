@@ -3,13 +3,6 @@
   "name": "Fat Startpage - Minimal Configurable Startpage",
   "version": "1.0",
 
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "fattyre@proton.me",
-      "strict_min_version": "42.0"
-    }
-  },
-
   "description": "A simplistic configurable start/new tab page for firefox",
 
   "chrome_settings_overrides": {
