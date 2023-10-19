@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Fat Startpage - Minimal Configurable Startpage",
+  "name": "Fat Startpage",
   "version": "1.0",
 
   "description": "A simplistic configurable start/new tab page for firefox",
