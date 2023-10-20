@@ -9,12 +9,10 @@ else {
 async function getLocation() {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position.coords.latitude);
-      console.log(position.coords.longitude);
       getWeather(position.coords.latitude, position.coords.longitude);
     });
   } else {
-    document.getElementById("temp").innerHTML = "ERROR";
+    document.getElementById("temp").textContent = "ERROR";
   }
 }
 
@@ -44,14 +42,19 @@ async function getWeather(latitude, longitude) {
     sunset: weatherData.daily.sunset[0],
   }
 
-  document.getElementById("temp").innerHTML = weatherDataFixed.temp;
+  const weatherImages = document.getElementsByClassName("weatherImage");
+  for(let i=0; i< weatherImages.length; i++) {
+    weatherImages[i].style.display = "none";
+  }
+
+  document.getElementById("temp").textContent = weatherDataFixed.temp;
   document.getElementById(translateCode(weatherData.current_weather.weathercode)[1]).style.display = "block";
-  document.getElementById("weatherDescription").innerHTML = weatherDataFixed.weatherCode;
-  document.getElementById("feelsLike").innerHTML = "Feels Like : " + weatherDataFixed.feelsLike;
-  document.getElementById("highLowTemp").innerHTML = "High/Low: " + weatherDataFixed.highTemp + " / " + weatherDataFixed.lowTemp;
-  document.getElementById("humidity").innerHTML = "Humidity: " + weatherDataFixed.humidity;
-  document.getElementById("wind").innerHTML = "Wind: " + weatherDataFixed.windSpeed + " " + weatherDataFixed.windDirection;
-  document.getElementById("sunriseSunset").innerHTML = "Sunrise/Sunset: " + (weatherDataFixed.sunrise).substr(weatherDataFixed.sunrise.length - 5) + "/" + (weatherDataFixed.sunset).substr(weatherDataFixed.sunset.length - 5);
+  document.getElementById("weatherDescription").textContent = weatherDataFixed.weatherCode;
+  document.getElementById("feelsLike").textContent = "Feels Like : " + weatherDataFixed.feelsLike;
+  document.getElementById("highLowTemp").textContent = "High/Low: " + weatherDataFixed.highTemp + " / " + weatherDataFixed.lowTemp;
+  document.getElementById("humidity").textContent = "Humidity: " + weatherDataFixed.humidity;
+  document.getElementById("wind").textContent = "Wind: " + weatherDataFixed.windSpeed + " " + weatherDataFixed.windDirection;
+  document.getElementById("sunriseSunset").textContent = "Sunrise/Sunset: " + (weatherDataFixed.sunrise).substr(weatherDataFixed.sunrise.length - 5) + "/" + (weatherDataFixed.sunset).substr(weatherDataFixed.sunset.length - 5);
 }
 
 
@@ -64,7 +67,6 @@ function translateCode(code) {
   switch(code) {
     case 0:
       weatherDesc = "Clear Sky";
-      console.log(time);
       if (time > 7 && time < 20) {
           weatherImage = prefix + "clearDay";
       }

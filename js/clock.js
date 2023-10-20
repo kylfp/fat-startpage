@@ -16,8 +16,8 @@ function showClock() {
     let currentTime = hour + ":" + minute + ":" + second;
     let currentDate = day + "-" + monthToLetters(month) + "-" + year.slice(2);
 
-    document.getElementById("time").innerHTML = currentTime;
-    document.getElementById("date").innerHTML = currentDate;
+    document.getElementById("time").textContent = currentTime;
+    document.getElementById("date").textContent = currentDate;
 }
 
 function checkTime(i) {

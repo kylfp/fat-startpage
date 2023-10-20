@@ -208,13 +208,13 @@ function updatePage() {
   // -- Category Titles --
   const bookmarkCategories = document.getElementsByClassName("bookmarkCategory")
   for(let i=0; i< bookmarkCategories.length; i++) {
-    bookmarkCategories[i].innerHTML = settings.bookmarks.titles[i];
+    bookmarkCategories[i].textContent = settings.bookmarks.titles[i];
   }
 
   // -- Bookmarks/Hyperlinks --
   const bookmarkElements = document.getElementsByClassName("bookmark");
   for(let i=0; i< bookmarkElements.length; i++) {
-    bookmarkElements[i].innerHTML = settings.bookmarks.names[i];
+    bookmarkElements[i].textContent = settings.bookmarks.names[i];
     bookmarkElements[i].href= settings.bookmarks.urls[i];
   }
 }
