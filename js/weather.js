@@ -1,5 +1,5 @@
 if (document.getElementById("manualInputBox").value == "yes") {
-  const locationSettings = browser.storage.local.get();
+  let settings = JSON.parse(localStorage.getItem("settings"));
   getWeather(settings.location.latitude, settings.location.longitude);
 }
 else {

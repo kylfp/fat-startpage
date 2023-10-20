@@ -34,9 +34,7 @@ document.getElementsByClassName("closePopupBtn")[0].addEventListener("click", ()
 });
 
 function init() {
-  const localSettings = browser.storage.local.get();
-  if (JSON.stringify(localSettings) === '{}') {
-    // Default Settings
+  if (localStorage.getItem("settings") === null) {
     settings = {
       location: {
         latitude: '',
@@ -68,12 +66,15 @@ function init() {
         ]
       }
     }
-    browser.storage.local.set({settings});
+    const settingsStr = JSON.stringify(settings);
+    localStorage.setItem("settings", settingsStr);
   }
   updatePage();
 }
 
 function changeSettings() {
+  let settings = JSON.parse(localStorage.getItem("settings"));
+
   //Colors
   settings.colors.bg = document.getElementById("bgInput").value;
   settings.colors.fg = document.getElementById("fgInput").value;
@@ -99,12 +100,13 @@ function changeSettings() {
     settings.bookmarks.urls[i] = bookmarkUrlInputs[i].value;
   }
 
-  browser.storage.local.set({settings});
+  localStorage.setItem("settings", JSON.stringify(settings));
   console.log('Settings submited');
   updatePage();
 }
 
 function updatePage() {
+  let settings = JSON.parse(localStorage.getItem("settings"));
   // ============================== COLORS ================================= //
   // -- General --
   document.getElementById("body").style.backgroundColor = settings.colors.bg;
@@ -220,6 +222,7 @@ function updatePage() {
 }
 
 function fillSettingsInputs() {
+  let settings = JSON.parse(localStorage.getItem("settings"));
   document.getElementById("bgInput").value = settings.colors.bg;
   document.getElementById("fgInput").value = settings.colors.fg;
   document.getElementById("color1Input").value = settings.colors.color1;
