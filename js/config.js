@@ -66,8 +66,7 @@ function init() {
         ]
       }
     }
-    const settingsStr = JSON.stringify(settings);
-    localStorage.setItem("settings", settingsStr);
+    localStorage.setItem("settings", JSON.stringify(settings));
   }
   updatePage();
 }
