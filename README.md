@@ -1,2 +1,2 @@
-# fat-startpage
+# Fat Startpage
 Custom Homepage
