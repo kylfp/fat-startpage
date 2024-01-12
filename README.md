@@ -1,7 +1,7 @@
 <h1 align="center">
 Fat Startpage
 </h1>
-<p align="cetner">
+<p align="center">
   <img src="https://github.com/catppuccin/catppuccin/stargazers"/>
 </p>
 
