@@ -1,0 +1,42 @@
+#searchModule {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  place-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 51vw;
+  height: 5vh;
+  font-weight: bold;
+}
+
+#searchInput {
+  width: 38vw;
+  height: 5vh;
+
+  border: solid;
+  border-width: 5px;
+  border-radius: 5px;
+}
+
+#searchInput[type=text] {
+  font-size: 1.75vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+#searchDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#searchEngineBtnSvg {
+  width: 2vw;
+  height: 2vw;
+}
+
+#searchDropdownContent {
+  display: none;
+  position: absolute;
+}

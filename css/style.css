@@ -1,0 +1,23 @@
+/* settingsBtn, searchEngineBtn */
+.generalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  cursor: pointer;
+}
+
+.dropdownBtn {
+  border-style: none;
+  cursor: pointer;
+}
+
+#settingsBtnSvg {
+  width: 2vw;
+  height: 2vw;
+}
+
+/* #searchEngineBtnSvg { */
+/*   width: 2vw; */
+/*   height: 2vw; */
+/* } */

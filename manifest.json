@@ -1,19 +1,16 @@
 {
   "manifest_version": 2,
   "name": "Fat Startpage",
-  "version": "1.2",
-
+  "version": "2.0",
   "description": "A simplistic configurable start/new tab page for firefox",
-
   "chrome_settings_overrides": {
-    "homepage": "index.html"
+    "homepage": "index.html",
   },
-
   "chrome_url_overrides": {
-    "newtab": "index.html"
+    "newtab": "index.html",
   },
-
   "permissions": [
-    "storage"
-  ]
+    "storage",
+    "geolocation",
+  ],
 }

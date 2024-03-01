@@ -1,360 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Fat Startpage</title>
+    <title>Fat Startpage 2</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/search.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
   </head>
-  <body id="body">
-    <div id="card">
+  <body>
+    <div id="card"> <!-- START MAIN BODY
 
       <!-- Settings Button -->
-      <button id="settingsBtn" class="colorNormBtn" type="button">
-        <svg viewBox="0 0 100 100" version="1.1" id="settingsBtnSvg" sodipodi:docname="gear-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+      <button id="settingsBtn" class="generalButton" type="button">
+        <svg id="settingsBtnSvg" viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
           <g id="settingsBtnSvgProps" class="colorNormBtnProps">
             <path d="m 95.709027,32.979363 c 0.609582,1.657298 0.09523,3.505092 -1.219152,4.686152 l -8.248394,7.505462 c 0.209545,1.581102 0.323841,3.200297 0.323841,4.83855 0,1.638246 -0.114296,3.257447 -0.323841,4.838543 l 8.248394,7.505466 c 1.314411,1.181062 1.828734,3.028856 1.219152,4.686149 -0.838169,2.266879 -1.847789,4.438514 -3.009795,6.533945 l -0.895326,1.543004 c -1.257259,2.095432 -2.666919,4.076566 -4.209917,5.943411 -1.123915,1.371557 -2.990756,1.828741 -4.667105,1.295358 L 72.31637,78.98366 c -2.552618,1.962089 -5.371932,3.600335 -8.381734,4.838548 l -2.381175,10.877205 c -0.380989,1.733497 -1.714445,3.105054 -3.466989,3.390791 -2.628819,0.438139 -5.333832,0.66673 -8.095995,0.66673 -2.762162,0 -5.46718,-0.228591 -8.095995,-0.66673 -1.752544,-0.285737 -3.086004,-1.657294 -3.466993,-3.390791 L 36.046319,83.822209 C 33.036511,82.583996 30.217203,80.94575 27.66458,78.983661 L 17.073114,82.37445 c -1.676346,0.533384 -3.543186,0.05716 -4.667102,-1.295357 C 10.86301,79.212253 9.4533552,77.231118 8.1960962,75.13568 L 7.3007728,73.592678 C 6.1387631,71.497245 5.1291427,69.325615 4.2909704,67.058736 3.68139,65.401437 4.195721,63.553644 5.5101311,62.372584 l 8.2483899,-7.505462 c -0.209546,-1.600148 -0.323842,-3.219349 -0.323842,-4.857595 0,-1.638252 0.114296,-3.257448 0.323842,-4.83855 L 5.5101311,37.665515 C 4.195721,36.484454 3.68139,34.636661 4.2909704,32.979362 5.1291427,30.712484 6.1387631,28.540854 7.3007728,26.445417 l 0.8953234,-1.542998 c 1.257259,-2.095437 2.6669138,-4.076573 4.2099158,-5.943413 1.123916,-1.371555 2.990756,-1.828745 4.667102,-1.295358 l 10.610518,3.371744 c 2.552617,-1.962089 5.371931,-3.600337 8.381733,-4.838549 L 38.446541,5.3196386 c 0.380988,-1.7334963 1.714445,-3.1050519 3.466988,-3.390795 2.62882,-0.4571852 5.333832,-0.6857778 8.095995,-0.6857778 2.762164,0 5.467181,0.2285926 8.095996,0.6667307 1.752543,0.2857386 3.086004,1.6572943 3.466992,3.3907905 l 2.381171,10.877205 c 3.009807,1.238212 5.829116,2.876459 8.381738,4.838548 l 10.610514,-3.371742 c 1.676346,-0.533384 3.54319,-0.05715 4.667102,1.295357 1.543002,1.866845 2.952656,3.847981 4.209914,5.943413 l 0.895327,1.543002 c 1.162015,2.095433 2.171626,4.267067 3.009805,6.533941 z M 50.009524,65.249042 a 15.239519,15.239519 0 1 0 0,-30.479036 15.239519,15.239519 0 1 0 0,30.479036 z" id="path1" style="stroke-width:0.190494" />
           </g>
         </svg>
       </button>
 
-      <!-- Information -->
-      <div id="information">
+      <!-- Information Module -->
+      <div id="info-module">
         <div id=datetimeWidget>
           <div id="time">00:00:00</div>
           <div id="date">00JAN00</div>
         </div>
-        <div id="weatherWidget">
-          <div id="weatherLine1">
-            <div id="temp">00°F</div>
-
-            <!-- Clear Day -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-clearDay" sodipodi:docname="clear_day.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.2666667,0,0,3.2666667,-2.2666667,-2.2666667)">
-                <g stroke="#979797" stroke-width="2" transform="translate(2,2)" class="weather-image-settings">
-                  <circle cx="14" cy="14" id="Oval-4" r="8" />
-                  <path d="m 14,0 v 3 m 9.899495,1.1005051 -2.12132,2.1213203 M 28,14 h -3 m -1.100505,9.899495 -2.12132,-2.12132 M 14,28 V 25 M 4.1005051,23.899495 6.2218254,21.778175 M 0,14 H 3 M 4.1005051,4.1005051 6.2218254,6.2218254" id="Path-7" stroke-linecap="round" />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Clear Night -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-clearNight" sodipodi:docname="clear_night.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.6423445,0,0,3.6423445,-8.8031964,-9.6756236)">
-                <g stroke="#979797" transform="translate(4,3)" class="weather-image-settings">
-                  <path d="M 8.5885576,0.76761511 C 7.5757866,2.6180598 7,4.7417888 7,7 c 0,7.179702 5.820298,13 13,13 1.548651,0 3.034054,-0.270794 4.411442,-0.767615 C 22.204234,23.265199 17.92149,26 13,26 5.8202982,26 0,20.179702 0,13 0,7.368949 3.5802336,2.5741063 8.5885576,0.76761511 Z" id="Combined-Shape" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                  <polygon fill="#d8d8d8" id="Star" points="12.25,6.3915458 12.103054,6.4522543 12.115382,6.29374 12.012236,6.1727457 12.166802,6.1354871 12.25,6 12.333198,6.1354871 12.487764,6.1727457 12.384618,6.29374 12.396946,6.4522543 " />
-                  <polygon fill="#d8d8d8" id="polygon1" points="20,6.566183 19.412215,6.809017 19.461528,6.1749602 19.048944,5.690983 19.667206,5.5419483 20,5 20.332794,5.5419483 20.951056,5.690983 20.538472,6.1749602 20.587785,6.809017 " />
-                  <polygon fill="#d8d8d8" id="polygon2" points="15.5,9.7830915 15.206107,9.9045085 15.230764,9.5874801 15.024472,9.3454915 15.333603,9.2709742 15.5,9 15.666397,9.2709742 15.975528,9.3454915 15.769236,9.5874801 15.793893,9.9045085 " />
-                  <polygon fill="#d8d8d8" id="polygon3" points="16,2.566183 15.412215,2.809017 15.461528,2.1749602 15.048944,1.690983 15.667206,1.5419483 16,1 16.332794,1.5419483 16.951056,1.690983 16.538472,2.1749602 16.587785,2.809017 " />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Cloudy Night -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-cloudyNight" sodipodi:docname="cloudy_night.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.5704769,0,0,3.5704769,-7.6429425,-8.4981558)">
-                <g stroke="#979797" stroke-width="2" transform="translate(4,3)" class="weather-image-settings">
-                  <path d="M 16.062186,19.392917 C 17.304316,19.787247 18.627312,20 20,20 21.548651,20 23.034054,19.729206 24.411442,19.232385 22.204234,23.265199 17.92149,26 13,26 5.8202982,26 0,20.179702 0,13 0,7.368949 3.5802336,2.5741063 8.5885576,0.76761511 8.0479745,1.7553203 7.6318911,2.8208859 7.3614155,3.943204" id="Combined-Shape" stroke-linecap="round" stroke-linejoin="round" />
-                  <g class="weather-image-settings" transform="rotate(-3,96.864592,-112.4767)">
-                    <g class="weather-image-settings" transform="translate(1)">
-                      <path d="m 5.0526316,3.4545455 c 0,-1.4058158 -1.1310701,-2.54545459 -2.5263158,-2.54545459 C 1.1310701,0.90909091 0,2.0487297 0,3.4545455 0,3.9312409 0.13005134,4.3773312 0.35635499,4.7587612" id="Oval-3" />
-                      <path d="M 8.7396995,1.2473011 C 8.3170219,0.50218214 7.5206391,0 6.6078472,0 5.7446036,0 4.9854742,0.4491429 4.5480887,1.1281503" id="path1" stroke-linecap="round" />
-                    </g>
-                    <g class="weather-image-settings" transform="translate(0,1)">
-                      <path d="M 6.6326935,3.3559057 C 6.0760237,3.0849965 5.4528185,2.9333333 4.7948718,2.9333333 c -2.3592472,0 -4.27179488,1.9500487 -4.27179488,4.3555556 0,2.4055069 1.91254768,4.3555551 4.27179488,4.3555551 1.165572,0 2.2221138,-0.475966 2.9928646,-1.247674" id="Oval" />
-                      <path d="m 6.8410691,9.1956533 c 0.9886987,1.4782597 2.6536208,2.4487907 4.5408639,2.4487907 3.033317,0 5.492307,-2.507205 5.492307,-5.5999996 0,-3.0927946 -2.45899,-5.59999996 -5.492307,-5.59999996 -2.6303719,0 -4.8288682,1.88533396 -5.3665484,4.40296386" id="path2" stroke-linecap="round" />
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </svg>
-
-            <!-- Drizzle -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-drizzle" sodipodi:docname="drizzle.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.4137931,0,0,3.4137931,-4.2819662,-2.9137931)">
-                <g stroke="#979797" stroke-width="2" transform="translate(3,2)" class="weather-image-settings">
-                  <g id="Group-2">
-                    <path d="M 9.6407582,4.5058329 C 8.762353,4.0865686 7.7789574,3.8518519 6.7407407,3.8518519 3.0179324,3.8518519 0,6.8697843 0,10.592593 c 0,3.722808 3.0179324,6.74074 6.7407407,6.74074 1.8392313,0 3.5064173,-0.736615 4.7226343,-1.930924" id="Oval" />
-                    <path d="m 9.9695675,13.543537 c 1.5601315,2.287784 4.1873195,3.789796 7.1653215,3.789796 4.786468,0 8.666667,-3.880198 8.666667,-8.6666663 C 25.801556,3.8801988 21.921357,0 17.134889,0 12.984256,0 9.5151069,2.9177787 8.6666667,6.8141107" id="path1" stroke-linecap="round" />
-                  </g>
-                  <g id="Group-5" stroke-linecap="round" transform="translate(17,20)">
-                    <path d="M 1,0 V 2" id="Path-5" />
-                    <path d="M 1,5 V 7" id="Path-6" />
-                  </g>
-                  <g id="Group-3" stroke-linecap="round" transform="translate(12,20)">
-                    <path d="M 1,0 V 2" id="path2" />
-                    <path d="M 1,5 V 7" id="path3" />
-                  </g>
-                  <g id="Group-4" stroke-linecap="round" transform="translate(7,20)">
-                    <path d="M 1,0 V 2" id="path4" />
-                    <path d="M 1,5 V 7" id="path5" />
-                  </g>
-                </g>
-              </g>
-            </svg>
-
-            <!-- Extreme Storms -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-extremeStorms" sodipodi:docname="extreme_storms.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(4.0971835,0,0,4.0971835,-15.554936,-15.554936)">
-                <g fill="#d8d8d8" class="weather-image-settings" stroke="#979797" transform="translate(4,5)">
-                  <rect height="1" width="9" x="6.5" y="20.5" id="rect1" />
-                  <rect height="1" width="11" x="8.5" y="15.5" id="rect2" />
-                  <rect height="1" width="17" x="5.5" y="10.5" id="rect3" />
-                  <rect height="1" width="17" x="2.5" y="5.5" id="rect4" />
-                  <rect height="1" width="23" x="0.5" y="0.5" id="rect5" />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Foggy Day -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-foggyDay" sodipodi:docname="foggy_day.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-linecap="round" stroke-width="1" transform="matrix(3.5261869,0,0,3.5261869,-6.2476741,-12.883666)">
-                <g stroke="#979797" stroke-width="2" transform="translate(3,7)" class="weather-image-settings">
-                  <path d="M 10.14412,5.0338585 C 9.2927421,4.6274947 8.3396049,4.4 7.3333333,4.4 3.725073,4.4 0.8,7.325073 0.8,10.933333 c 0,1.103564 0.2736126,2.143223 0.7567001,3.054838" id="Oval" />
-                  <path d="m 24.127928,14.107131 c 1.054728,-1.403989 1.679734,-3.149238 1.679734,-5.0404643 0,-4.6391919 -3.760809,-8.40000003 -8.4,-8.40000003 -4.022922,0 -7.385328,2.82800083 -8.207662,6.60444573" id="path1" />
-                  <path d="M 0,17 H 13.055048 M 17,17 h 1.902832" id="Path-8" />
-                  <path d="M 5,13 H 21" id="path2" />
-                  <path d="m 7,20 h 13.85601 m 3.404618,0 h 1.642204" id="path3" transform="rotate(180,16.451416,20.5)" />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Foggy Night -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-foggyNight" sodipodi:docname="foggy_night.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-linecap="round" stroke-width="1" transform="matrix(3.4252699,0,0,3.4252699,-2.9252701,-4.8044616)">
-                <g stroke="#979797" stroke-width="2" transform="translate(2,3)" class="weather-image-settings">
-                  <path d="M 3.5131666,18.324997 C 2.547261,16.50769 2,14.433947 2,12.232385 2,6.6013338 5.5802336,1.8064912 10.588558,0 9.5757866,1.8504446 9,3.9741737 9,6.2323849 9,9.9747753 10.58136,13.347819 13.112322,15.71976 m 11.460232,3.258118 c 0.630661,-0.126596 1.244821,-0.29883 1.838888,-0.513108 -1.006608,1.839184 -2.444898,3.4084 -4.178587,4.571363" id="Combined-Shape" stroke-linejoin="round" />
-                  <path d="M 0,22 H 13.055048 M 17,22 h 1.902832" id="Path-8" />
-                  <path d="M 6,18 H 22" id="path1" />
-                  <path d="m 8,25 h 13.85601 m 3.404618,0 h 1.642204" id="path2" transform="rotate(180,17.451416,25.5)" />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Heavy Rain -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-heavyRain" sodipodi:docname="heavy_rain.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.414163,0,0,3.414163,-4.2878479,-2.9141636)">
-                <g stroke="#979797" fill="#979797" transform="translate(3,2)" class="weather-image-settings">
-                  <path d="M 9.6407582,4.5058329 C 8.762353,4.0865686 7.7789574,3.8518519 6.7407407,3.8518519 3.0179324,3.8518519 0,6.8697843 0,10.592593 c 0,3.722808 3.0179324,6.74074 6.7407407,6.74074 1.8392313,0 3.5064173,-0.736615 4.7226343,-1.930924" id="Oval" stroke-width="2" />
-                  <path d="m 9.9695675,13.543537 c 1.5601315,2.287784 4.1873195,3.789796 7.1653215,3.789796 4.786468,0 8.666667,-3.880198 8.666667,-8.6666663 C 25.801556,3.8801988 21.921357,0 17.134889,0 12.984256,0 9.5151069,2.9177787 8.6666667,6.8141107" id="path1" stroke-linecap="round" stroke-width="2" />
-                  <path d="m 14.241437,23.741437 0.30946,2.060031 c 0.134021,0.89216 0.900485,1.552085 1.802656,1.552085 0.828428,0 1.5,-0.671572 1.5,-1.5 0,-0.902171 -0.659925,-1.668635 -1.552085,-1.802656 z" id="Rectangle-4" transform="rotate(45,16,25.5)" />
-                  <path d="m 6.2414368,23.741437 0.3094601,2.060031 c 0.1340214,0.89216 0.9004856,1.552085 1.8026565,1.552085 0.8284271,0 1.5,-0.671572 1.5,-1.5 0,-0.902171 -0.659925,-1.668635 -1.5520857,-1.802656 z" id="Rectangle-3" transform="rotate(45,8,25.5)" />
-                  <path d="m 10.241437,19.741437 0.30946,2.060031 c 0.134021,0.89216 0.900485,1.552085 1.802656,1.552085 0.828428,0 1.5,-0.671572 1.5,-1.5 0,-0.902171 -0.659925,-1.668635 -1.552085,-1.802656 z" id="Rectangle-2" transform="rotate(45,12,21.5)" />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Moderate Rain -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-moderateRain" sodipodi:docname="moderate_rain.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.4789031,0,0,3.4789031,-5.3172659,-2.9789038)">
-                <g class="weather-image-settings" stroke="#979797" stroke-width="2" transform="translate(3,2)">
-                  <g id="Group-2">
-                    <path d="M 9.6407582,4.5058329 C 8.762353,4.0865686 7.7789574,3.8518519 6.7407407,3.8518519 3.0179324,3.8518519 0,6.8697843 0,10.592593 c 0,3.722808 3.0179324,6.74074 6.7407407,6.74074 1.8392313,0 3.5064173,-0.736615 4.7226343,-1.930924" id="Oval" />
-                    <path d="m 9.9695675,13.543537 c 1.5601315,2.287784 4.1873195,3.789796 7.1653215,3.789796 4.786468,0 8.666667,-3.880198 8.666667,-8.6666663 C 25.801556,3.8801988 21.921357,0 17.134889,0 12.984256,0 9.5151069,2.9177787 8.6666667,6.8141107" id="path1" stroke-linecap="round" />
-                  </g>
-                  <g id="Group-3" stroke-linecap="round" transform="rotate(25,-34.405904,36.923419)">
-                    <path d="M 5,0 V 2" id="Path-5" />
-                    <path d="M 5,5 V 7" id="Path-6" />
-                    <path d="M 1,1 V 3" id="path2" />
-                    <path d="M 1,6 V 8" id="path3" />
-                  </g>
-                  <g id="g7" stroke-linecap="round" transform="rotate(25,-38.905904,16.62523)">
-                    <path d="M 5,0 V 2" id="path4" />
-                    <path d="M 5,5 V 7" id="path5" />
-                    <path d="M 1,1 V 3" id="path6" />
-                    <path d="M 1,6 V 8" id="path7" />
-                  </g>
-                </g>
-              </g>
-            </svg>
-
-            <!-- Overcast -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-overcast" sodipodi:docname="overcast.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.6676353,0,0,3.6676353,-9.7965061,-9.537947)">
-                <g stroke="#979797" stroke-width="2" transform="translate(3,6)" class="weather-image-settings">
-                  <g id="Group-3" transform="translate(2)">
-                    <path d="M 8,7 C 8,4.790861 6.209139,3 4,3 1.790861,3 0,4.790861 0,7 0,7.7490929 0.20591462,8.4500919 0.56422874,9.0494818" id="Oval-3" />
-                    <path d="M 18.081622,3.5314731 C 16.875832,1.4218241 14.603958,0 12,0 9.5373897,0 7.3717901,1.2716545 6.1240426,3.1941225" id="path1" stroke-linecap="round" />
-                  </g>
-                  <g id="Group-2" transform="translate(0,3)">
-                    <path d="M 10.14412,5.0338585 C 9.2927421,4.6274947 8.3396049,4.4 7.3333333,4.4 3.725073,4.4 0.8,7.325073 0.8,10.933333 c 0,3.608261 2.925073,6.533334 6.5333333,6.533334 1.7826395,0 3.3985267,-0.713951 4.5773227,-1.871511" id="Oval" />
-                    <path d="m 10.462812,13.79348 c 1.512127,2.21739 4.058478,3.673187 6.94485,3.673187 4.639191,0 8.4,-3.760808 8.4,-8.4000003 0,-4.6391919 -3.760809,-8.40000003 -8.4,-8.40000003 -4.022922,0 -7.385328,2.82800083 -8.207662,6.60444573" id="path2" stroke-linecap="round" />
-                  </g>
-                </g>
-              </g>
-            </svg>
-
-            <!-- Partly Cloudy -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-partlyCloudy" sodipodi:docname="partly_cloudy.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.3553287,0,0,3.3553287,-3.7148135,-2.7905054)">
-                <g stroke="#979797" stroke-width="2" transform="translate(2,5)" class="weather-image-settings">
-                  <path d="M 12.041412,7.5729699 C 11.665116,5.9090959 10.17765,4.6666667 8.4,4.6666667 6.3381369,4.6666667 4.6666667,6.3381369 4.6666667,8.4 c 0,0.5692019 0.127383,1.108652 0.355197,1.5913978" id="Oval-2" stroke-linecap="round" />
-                  <g id="Group-3" transform="translate(2,4)">
-                    <path d="M 10.14412,5.0338585 C 9.2927421,4.6274947 8.3396049,4.4 7.3333333,4.4 3.725073,4.4 0.8,7.325073 0.8,10.933333 c 0,3.608261 2.925073,6.533334 6.5333333,6.533334 1.7826395,0 3.3985267,-0.713951 4.5773227,-1.871511" id="Oval" />
-                    <path d="m 10.462812,13.79348 c 1.512127,2.21739 4.058478,3.673187 6.94485,3.673187 4.639191,0 8.4,-3.760808 8.4,-8.4000003 0,-4.6391919 -3.760809,-8.40000003 -8.4,-8.40000003 -4.022922,0 -7.385328,2.82800083 -8.207662,6.60444573" id="path1" stroke-linecap="round" />
-                  </g>
-                  <path d="M 7.9438618,1.8666667 V 0 M 12.691346,4.1562704 14.142018,2.981539 M 2.0287784,9.2810256 0.20995432,9.7009342 M 3.1963776,4.1562704 1.7457052,2.981539" id="Path-4" stroke-linecap="round" />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Snow -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-snow" sodipodi:docname="snow.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.3559322,0,0,3.3559322,-3.3619329,-2.8559321)">
-                <g class="weather-image-settings" stroke="#979797" stroke-width="2" transform="translate(3,2)">
-                  <path d="M 9.6407582,4.5058329 C 8.762353,4.0865686 7.7789574,3.8518519 6.7407407,3.8518519 3.0179324,3.8518519 0,6.8697843 0,10.592593 c 0,3.722808 3.0179324,6.74074 6.7407407,6.74074 1.8392313,0 3.5064173,-0.736615 4.7226343,-1.930924" id="Oval" />
-                  <path d="m 9.9695675,13.543537 c 1.5601315,2.287784 4.1873195,3.789796 7.1653215,3.789796 4.786468,0 8.666667,-3.880198 8.666667,-8.6666663 C 25.801556,3.8801988 21.921357,0 17.134889,0 12.984256,0 9.5151069,2.9177787 8.6666667,6.8141107" id="path1" stroke-linecap="round" />
-                </g>
-                <circle cx="14" cy="29" id="Oval-10" r="1" />
-                <circle cx="22" cy="23" id="circle1" r="1" />
-                <circle cx="8.5" cy="22.5" id="circle2" r="1" />
-                <circle cx="18.5" cy="26.5" id="circle3" r="1" />
-                <polygon fill="#d8d8d8" id="Star-2" points="8,27 10,27 8,27 9,28.732051 8,27 7,28.732051 8,27 6,27 8,27 7,25.267949 8,27 9,25.267949 " stroke-linecap="round" stroke-linejoin="round" />
-                <polygon fill="#d8d8d8" id="polygon3" points="15,23 17,23 15,23 16,24.732051 15,23 14,24.732051 15,23 13,23 15,23 14,21.267949 15,23 16,21.267949 " stroke-linecap="round" stroke-linejoin="round" />
-                <polygon fill="#d8d8d8" id="polygon4" points="22,28 24,28 22,28 23,29.732051 22,28 21,29.732051 22,28 20,28 22,28 21,26.267949 22,28 23,26.267949 " stroke-linecap="round" stroke-linejoin="round" />
-              </g>
-            </svg>
-
-            <!-- Thunderstorm -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-thunderstorm" sodipodi:docname="thunderstorm.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-width="1" transform="matrix(3.1935484,0,0,3.1935484,-0.77990414,-2.6935486)">
-                <g transform="translate(3,2)" class="weather-image-settings">
-                  <path d="M 9.6407582,4.5058329 C 8.762353,4.0865686 7.7789574,3.8518519 6.7407407,3.8518519 3.0179324,3.8518519 0,6.8697843 0,10.592593 c 0,3.722808 3.0179324,6.74074 6.7407407,6.74074 1.8392313,0 3.5064173,-0.736615 4.7226343,-1.930924" id="Oval" stroke-width="2" />
-                  <path d="m 9.9695675,13.543537 c 1.5601315,2.287784 4.1873195,3.789796 7.1653215,3.789796 4.786468,0 8.666667,-3.880198 8.666667,-8.6666663 C 25.801556,3.8801988 21.921357,0 17.134889,0 12.984256,0 9.5151069,2.9177787 8.6666667,6.8141107" id="path1" stroke-linecap="round" stroke-width="2" />
-                  <polygon id="Rectangle-5" points="14,18 12,22 15,22 9,30 10,25 7,25 10,18 " />
-                </g>
-              </g>
-            </svg>
-
-            <!-- Windy -->
-            <svg height="100" version="1.1" viewBox="0 0 100 100" width="100" id="weatherImage-windy" sodipodi:docname="windy.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" class="weather-image-settings" stroke="none" stroke-linecap="round" stroke-width="1" transform="matrix(3.4666479,0,0,3.4666479,-5.4663664,-1.9997185)">
-                <g stroke="#979797" stroke-width="2" transform="translate(3,3)" class="weather-image-settings">
-                  <g id="Group-2" transform="translate(2)">
-                    <g id="Group" transform="translate(5)">
-                      <path d="M 5,10 C 7.7614237,10 10,7.7614237 10,5 10,2.2385763 7.7614237,0 5,0 2.2385763,0 0,2.2385763 0,5" id="Oval-6" />
-                    </g>
-                    <path d="M 0,10 H 10" id="Path-9" />
-                  </g>
-                  <g id="Group-3" transform="translate(3,17)">
-                    <path d="M 0,1 H 14" id="Path-10" />
-                    <path d="m 11,4 c 0,1.6568543 1.343146,3 3,3 1.656854,0 3,-1.3431457 3,-3 0,-1.6568542 -1.343146,-3 -3,-3" id="Oval-7" />
-                  </g>
-                  <g id="Group-4" transform="translate(0,4)">
-                    <path d="M 21,10 C 23.761424,10 26,7.7614237 26,5 26,2.2385763 23.761424,0 21,0 20.703694,0 20.413408,0.02577426 20.131262,0.07520311" id="Oval-8" />
-                    <path d="M 0,10 H 21" id="Path-11" />
-                  </g>
-                </g>
-              </g>
-            </svg>
-
-          </div>
-          <div id="weatherLine2">
-            <div id="weatherDescription">Desciption</div>
-            <button id="expandWeatherBtn" class="colorNormBtn" type="button">
-              <svg viewBox="0 0 100 100" version="1.1" id="expandWeatherBtnSvg" sodipodi:docname="caret-down-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                <g id=expandWeatherBtnSvgProps class="colorNormBtnProps">
-                  <path d="m 43.18998,76.101104 c 3.764763,3.764764 9.878738,3.764764 13.643502,0 L 95.38466,37.549927 c 2.770867,-2.770865 3.584049,-6.897045 2.078152,-10.511219 -1.505908,-3.614172 -4.999609,-5.963385 -8.914964,-5.963385 l -77.102354,0.03012 c -3.8852365,0 -7.409055,2.349213 -8.9149603,5.963386 C 1.0246283,30.683 1.8679353,34.80918 4.608683,37.580045 l 38.551179,38.551178 z" id="path1" style="stroke-width:0.301181" />
-                </g>
-              </svg>
-            </button>
-            <dialog id=weatherExpansionPopup>
-              <button class="closePopupBtn colorModBtn" type="button">
-                <svg viewBox="0 0 100 100" version="1.1" class="closePopupBtnSvg" sodipodi:docname="xmark-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                  <g id="" class="closePopupBtnSvgProps colorModBtnProps">
-                    <path d="m 95.752247,17.979501 c 3.797499,-3.797497 3.797499,-9.9646321 0,-13.7621295 -3.797495,-3.79749968 -9.96463,-3.79749968 -13.762133,0 L 49.999998,36.237869 17.979502,4.2477492 c -3.797498,-3.79749736 -9.9646337,-3.79749736 -13.762131,0 -3.79749902,3.7974974 -3.79749902,9.9646328 0,13.7621288 L 36.23787,50 4.2477495,82.020499 c -3.7974975,3.797502 -3.7974975,9.964638 0,13.762125 3.7974974,3.797506 9.9646325,3.797506 13.7621295,0 L 49.999998,63.762129 82.020499,95.752247 c 3.797494,3.797499 9.96463,3.797499 13.762125,0 3.797506,-3.797488 3.797506,-9.964623 0,-13.762125 L 63.762131,50 Z" id="path1" style="stroke-width:0.303799" />
-                  </g>
-                </svg>
-              </button>
-              <ul>
-                <li id="feelsLike"></li>
-                <li id="highLowTemp"></li>
-                <li id="humidity"></li>
-                <li id="wind"></li>
-                <li id="sunriseSunset"></li>
-              </ul>
-            </dialog>
-          </div>
-        </div>
       </div>
 
-      <!-- Search -->
-      <div id="search">
-        <form method="get" action="https://search.brave.com/search?q={}">
-          <input id="search-input" type="text" placeholder="Brave Search" name="q" value="" />
+      <!-- Search Module -->
+      <div id="searchModule">
+        <form id="searchUrl" method="get" action="https://search.brave.com/search?q={}">
+          <input id="searchInput" type="text" placeholder="Web Search" name="q" value="" />
         </form>
+        <div id="searchDropdown">
+          <button id="searchEngineBtn" class="generalButton" type="button">
+            <svg viewBox="0 0 100 100" version="1.1" id="searchEngineBtnSvg" sodipodi:docname="caret-down-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+              <g id="searchEngineBtnSvgProps" class="colorNormBtnProps">
+                <path d="m 43.18998,76.101104 c 3.764763,3.764764 9.878738,3.764764 13.643502,0 L 95.38466,37.549927 c 2.770867,-2.770865 3.584049,-6.897045 2.078152,-10.511219 -1.505908,-3.614172 -4.999609,-5.963385 -8.914964,-5.963385 l -77.102354,0.03012 c -3.8852365,0 -7.409055,2.349213 -8.9149603,5.963386 C 1.0246283,30.683 1.8679353,34.80918 4.608683,37.580045 l 38.551179,38.551178 z" id="path1" style="stroke-width:0.301181" />
+              </g>
+            </svg>
+          </button>
+          <div id="searchDropdownContent">
+            <button id="braveSearch" class="dropdownBtn" type="button">Brave</button>
+            <button id="startpageSearch" class="dropdownBtn" type="button">Startpage</button>
+            <button id="duckduckgoSearch" class="dropdownBtn" type="button">DuckDuckGo</button>
+            <button id="googleSearch" class="dropdownBtn" type="button">Google</button>
+            <button id="bingSearch" class="dropdownBtn" type="button">Bing</button>
+          </div>
+        </div>
       </div>
 
-      <!-- Bookmarks -->
-      <div id="bookmarks">
-        <div class="bookmarkBox color1">
-          <h2 class="bookmarkCategory"></h2>
-          <div class="bookmarkListBox">
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-            <a class="bookmark color1" href=""></a>
-          </div>
-        </div>
-        <div class="bookmarkBox color2">
-          <h2 class="bookmarkCategory"></h2>
-          <div class="bookmarkListBox">
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-            <a class="bookmark color2" href=""></a>
-          </div>
-        </div>
-        <div class="bookmarkBox color3">
-          <h2 class="bookmarkCategory"></h2>
-          <div class="bookmarkListBox">
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-            <a class="bookmark color3" href=""></a>
-          </div>
-        </div> <!-- End bm-box3 -->
-        <div class="bookmarkBox color4">
-          <h2 class="bookmarkCategory"></h2>
-          <div class="bookmarkListBox">
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-            <a class="bookmark color4" href=""></a>
-          </div>
-        </div> <!-- End bm-box4 -->
-      </div> <!-- End bookmarks -->
+      <!-- Bookmarks Module -->
 
-      <!-- Settings Dialog -->
-      <dialog id="settingsPopup" class="settingsPopup">
+      <!-- Settings Module -->
+      <dialog id="settings-module">
         <button class="closePopupBtn colorModBtn" type="button">
           <svg viewBox="0 0 100 100" version="1.1" class="closePopupBtnSvg" sodipodi:docname="xmark-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
             <g id="" class="closePopupBtnSvgProps colorModBtnProps">
@@ -362,96 +64,14 @@
             </g>
           </svg>
         </button>
-        <div id="settingsPanel">
-          <h3>Color Settings</h3>
-          <h3>Weather Settings</h3>
-          <div id="colorSettings">
-            <label id="bgInputLabel" class="colorInputLabel" for="bgInput">Background <input id="bgInput" type="color" value="#000000"></label>
-            <label id="color1InputLabel" class="colorInputLabel" for="color1Input">Color 1 <input id="color1Input" type="color" value="#000000"></label>
-            <label id="color2InputLabel" class="colorInputLabel" for="color2Input">Color 2 <input id="color2Input" type="color" value="#000000"></label>
-            <label id="fgInputLabel" class="colorInputLabel" for="fgInput">Foreground <input id="fgInput" type="color" value="#000000"></label>
-            <label id="color3InputLabel" class="colorInputLabel" for="color3Input">Color 3 <input id="color3Input" type="color" value="#000000"></label>
-            <label id="color4InputLabel" class="colorInputLabel" for="color4Input">Color 4 <input id="color4Input" type="color" value="#000000"></label>
-          </div>
+      </dialog>
 
-          <div id="locationSettings">
-            <label for="manualInputBox">Manual Input <input id="manualInputBox" class="locationInput" type="text" value="no"></label>
-            <label for="latitudeInput" id="latitudeInputLabel">Latitude <input id="latitudeInput" type="number" class="locationInput" placeholder="latitude"></label>
-            <label for="longitudeInput" id="longitudeInputLabel">Longitude <input id="longitudeInput" type="number" class="locationInput" placeholder="longitude"></label>
-          </div>
+    </div> <!-- END MAIN BODY -->
 
-          <h3 id="bookmarkSettingsHeader">Bookmark Settings</h3>
-          <div id="bookmarkSettings">
-            <h4>Category 1</h4>
-            <h4>Category 2</h4>
-            <h4>Category 3</h4>
-            <h4>Category 4</h4>
-            <input class="bookmarkCategoryInput" type="text" placeholder="Category 1 Name">
-            <input class="bookmarkCategoryInput" type="text" placeholder="Category 2 Name">
-            <input class="bookmarkCategoryInput" type="text" placeholder="Category 3 Name">
-            <input class="bookmarkCategoryInput" type="text" placeholder="Category 4 Name">
-            <div class="bookmarkInputListBox">
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-            </div>
-            <div class="bookmarkInputListBox">
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-            </div>
-            <div class="bookmarkInputListBox">
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-            </div>
-            <div class="bookmarkInputListBox">
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-              <input class="bookmarkNameInput" type="text" placeholder="Name"> <input class="bookmarkUrlInput" type="url" placeholder="url"></li>
-            </div>
-          </div>
-          <button type="button" id="saveBtn" class="colorModBtn">
-            <svg viewBox="0 0 100 100" version="1.1" id="saveBtnSvg" sodipodi:docname="floppy-disk-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g id="saveBtnSvgProps" class="colorModBtnProps">
-                <path d="m 15.465486,1.6516795 c -7.6191779,0 -13.8138065,6.1946286 -13.8138065,13.8138065 V 84.53452 c 0,7.619173 6.1946286,13.8138 13.8138065,13.8138 h 69.069029 c 7.619177,0 13.813805,-6.194627 13.813805,-13.8138 V 32.149974 c 0,-3.669293 -1.446133,-7.187496 -4.03622,-9.777586 L 77.627612,5.6879008 C 75.037524,3.0978126 71.519319,1.6516795 67.850027,1.6516795 Z m 0,20.7207075 c 0,-3.820379 3.086522,-6.906901 6.906901,-6.906901 h 41.441418 c 3.820381,0 6.906903,3.086522 6.906903,6.906901 v 13.813807 c 0,3.820381 -3.086522,6.906903 -6.906903,6.906903 H 22.372387 c -3.820379,0 -6.906901,-3.086522 -6.906901,-6.906903 z M 50,56.906903 a 13.813809,13.813809 0 1 1 0,27.627617 13.813809,13.813809 0 1 1 0,-27.627617 z" id="path1" style="stroke-width:0.21584" />
-              </g>
-            </svg>
-          </button>
-
-        </div>
-      </dialog> <!-- End settings dialog-->
-    </div> <!-- End card -->
   </body>
-  <script src="js/config.js"></script>
-  <script src="js/clock.js"></script>
-  <script src="js/weather.js"></script>
+  <!-- <script src="./js/style.js"></script> -->
+  <!-- <script src="./js/weather.js"></script> -->
+  <script src="./js/search.js"></script>
+  <!-- <script src="./js/bookmarks.js"></script> -->
+  <!-- <script src="./js/clock.js"></script> -->
 </html>
