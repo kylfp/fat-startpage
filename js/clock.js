@@ -112,3 +112,13 @@ function getAmPm(hour) {
     return 'PM';
   }
 }
+
+// Date Time Format
+//d (day of month), dd (day of month leading 0), ddd (day of weak 3 let), dddd (day of week full)
+//M (month digit), MM (month digit leading 0), MMM (month 3 let), MMMM (month full)
+//y (year 2 digit), yy (year 2 digit leading 0), yyy (year 3 digit), yyyy (year 4 digit)
+//h (12 hour no lead 0), H (24 hour no lead 0), hh (12 hour lead 0), HH (24 hour lead 0)
+//m (monnute no lead 0), mm (minute lead 0)
+//s (second no lead 0), ss (second lead 0)
+//t (time maker 1 let), tt (time maker 2 let)
+//z (time zone designator)
