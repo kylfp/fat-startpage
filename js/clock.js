@@ -7,25 +7,8 @@ function init() {
   if(localStorage.getItem('clock') === null) {
     console.info('INFO: Default Clock Settings')
     clockSettings = {
-      time: {
-        format: 1,
-        apIndicator: true,
-        seconds: true,
-      },
-      date: {
-        day: {
-          pos: 1,
-        },
-        month: {
-          pos: 2,
-          format: 1, // 1=3Dig 2=3DigCap 3=Full 4=FullCap
-        },
-        year: {
-          show: true,
-          start: true, // 
-          format: 1, // 1=2Dig 2=4Dig
-        },
-      },
+      time: 'HH:mm:ss',
+      date: 'yyyy-MM-dd',
     }
     save(clockSettings);
   }
@@ -36,23 +19,44 @@ function init() {
   showClock();
 }
 
-function formatTime(hour, minute, second, timeSettings) {
-  let time;
-  if (timeSettings.format == 1) {
-    time = `${milTimeConv(hour)}:${minute}`;
-    time += timeSettings.apIndicator ? ` ${getAmPm(hour)}` : '';
-  }
-  else {
-    time = `${hour}:${minute}`;
-  }
-  time += timeSettings.seconds ? `${second}` : '';
-  return time;
-}
+function formatCustomDate(date, customFormat) {
+  const second = date.getSeconds();
 
-function formatDate (day, month, year, dateSettings) {
-  let date;
-  date = dateSettings.
+  const minute = date.getMinutes();
 
+  const hour24 = date.getHours();
+  const hour12 = milTimeConv(hour24); // USR
+  const dnIndicator = getAmPm(hour24); // USR
+
+  const day = date.getDate();
+  const dayOfWeek = date.getDay();
+
+  const month = date.getMonth();
+
+  const year = date.getFullYear();
+
+  const formattedDate = customFormat
+    .replace('ss', second.padStart(2, '0'))
+    .replace('s', second)
+    .replace('mm', minute.padStart(2, '0'))
+    .replace('m', minute)
+    .replace('hhh', dnIndicator)
+    .replace('hh', hour12.padStart(2, '0'))
+    .replace('h', hour12)
+    .replace('HH', hour24.padStart(2, '0'))
+    .replace('H', hour24)
+    .replace('dddd', dayOfWeek)
+    .replace('ddd', dayOfWeek)
+    .replace('dd', day)
+    .replace('d', day)
+    .replace('MMMM', numToMonthFull(month))
+    .replace('MMM', numToMonth3(month))
+    .replace('MM', month.padStart(2, '0'))
+    .replace('M', month)
+    .replace('yy', year)
+    .replace('y', year.slice(2))
+
+  return formattedDate
 }
 
 function save(clockSettings) {
@@ -82,17 +86,33 @@ function showClock() {
     document.getElementById("date").textContent = currentDate;
 }
 
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
+function numToMonth3(month) {
+  let monthList = [
+    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT",
+    "NOV", "DEC"
+  ]
+  return monthList[month];
 }
 
-function monthToLetters (month) {
-    let monthList = [
-        "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT",
-        "NOV", "DEC"
-    ]
-    return monthList[month]
+function numToMonthFull(month) {
+  let monthList = [
+    "January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"
+  ]
+  return monthList[month];
+}
+
+function numToWeek3(dayOfWeek) {
+  let weekList = [ 'SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT' ]
+  return weekList[dayOfWeek];
+}
+
+function numToWeekFull(dayOfWeek) {
+  let weekList = [
+    'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+    'Saturday'
+  ]
+  return weekList[dayOfWeek];
 }
 
 function milTimeConv(hour) {
