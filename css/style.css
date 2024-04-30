@@ -17,6 +17,11 @@
   height: 2vw;
 }
 
+#settingsChooserDropdownContent {
+  display: none;
+  position: absolute;
+}
+
 /* #searchEngineBtnSvg { */
 /*   width: 2vw; */
 /*   height: 2vw; */

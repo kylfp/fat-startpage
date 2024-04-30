@@ -13,45 +13,100 @@
   <body>
     <div id="card"> <!-- START MAIN BODY
 
-      <!-- Settings Button -->
-      <button id="settingsBtn" class="generalButton" type="button">
-        <svg id="settingsBtnSvg" viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-          <g id="settingsBtnSvgProps" class="colorNormBtnProps">
-            <path d="m 95.709027,32.979363 c 0.609582,1.657298 0.09523,3.505092 -1.219152,4.686152 l -8.248394,7.505462 c 0.209545,1.581102 0.323841,3.200297 0.323841,4.83855 0,1.638246 -0.114296,3.257447 -0.323841,4.838543 l 8.248394,7.505466 c 1.314411,1.181062 1.828734,3.028856 1.219152,4.686149 -0.838169,2.266879 -1.847789,4.438514 -3.009795,6.533945 l -0.895326,1.543004 c -1.257259,2.095432 -2.666919,4.076566 -4.209917,5.943411 -1.123915,1.371557 -2.990756,1.828741 -4.667105,1.295358 L 72.31637,78.98366 c -2.552618,1.962089 -5.371932,3.600335 -8.381734,4.838548 l -2.381175,10.877205 c -0.380989,1.733497 -1.714445,3.105054 -3.466989,3.390791 -2.628819,0.438139 -5.333832,0.66673 -8.095995,0.66673 -2.762162,0 -5.46718,-0.228591 -8.095995,-0.66673 -1.752544,-0.285737 -3.086004,-1.657294 -3.466993,-3.390791 L 36.046319,83.822209 C 33.036511,82.583996 30.217203,80.94575 27.66458,78.983661 L 17.073114,82.37445 c -1.676346,0.533384 -3.543186,0.05716 -4.667102,-1.295357 C 10.86301,79.212253 9.4533552,77.231118 8.1960962,75.13568 L 7.3007728,73.592678 C 6.1387631,71.497245 5.1291427,69.325615 4.2909704,67.058736 3.68139,65.401437 4.195721,63.553644 5.5101311,62.372584 l 8.2483899,-7.505462 c -0.209546,-1.600148 -0.323842,-3.219349 -0.323842,-4.857595 0,-1.638252 0.114296,-3.257448 0.323842,-4.83855 L 5.5101311,37.665515 C 4.195721,36.484454 3.68139,34.636661 4.2909704,32.979362 5.1291427,30.712484 6.1387631,28.540854 7.3007728,26.445417 l 0.8953234,-1.542998 c 1.257259,-2.095437 2.6669138,-4.076573 4.2099158,-5.943413 1.123916,-1.371555 2.990756,-1.828745 4.667102,-1.295358 l 10.610518,3.371744 c 2.552617,-1.962089 5.371931,-3.600337 8.381733,-4.838549 L 38.446541,5.3196386 c 0.380988,-1.7334963 1.714445,-3.1050519 3.466988,-3.390795 2.62882,-0.4571852 5.333832,-0.6857778 8.095995,-0.6857778 2.762164,0 5.467181,0.2285926 8.095996,0.6667307 1.752543,0.2857386 3.086004,1.6572943 3.466992,3.3907905 l 2.381171,10.877205 c 3.009807,1.238212 5.829116,2.876459 8.381738,4.838548 l 10.610514,-3.371742 c 1.676346,-0.533384 3.54319,-0.05715 4.667102,1.295357 1.543002,1.866845 2.952656,3.847981 4.209914,5.943413 l 0.895327,1.543002 c 1.162015,2.095433 2.171626,4.267067 3.009805,6.533941 z M 50.009524,65.249042 a 15.239519,15.239519 0 1 0 0,-30.479036 15.239519,15.239519 0 1 0 0,30.479036 z" id="path1" style="stroke-width:0.190494" />
-          </g>
-        </svg>
-      </button>
-
-      <!-- Information Module -->
-      <div id="info-module">
-        <div id=datetimeWidget>
-          <div id="time">00:00:00</div>
-          <div id="date">00JAN00</div>
+      <!-- Settings Chooser -->
+      <div id="settingsChooserDropdown">
+        <button id="settingsDropdownBtn" class="generalButton" type="button">
+          <svg id="settingsBtnSvg" viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <g id="settingsBtnSvgProps" class="colorNormBtnProps">
+              <path d="m 95.709027,32.979363 c 0.609582,1.657298 0.09523,3.505092 -1.219152,4.686152 l -8.248394,7.505462 c 0.209545,1.581102 0.323841,3.200297 0.323841,4.83855 0,1.638246 -0.114296,3.257447 -0.323841,4.838543 l 8.248394,7.505466 c 1.314411,1.181062 1.828734,3.028856 1.219152,4.686149 -0.838169,2.266879 -1.847789,4.438514 -3.009795,6.533945 l -0.895326,1.543004 c -1.257259,2.095432 -2.666919,4.076566 -4.209917,5.943411 -1.123915,1.371557 -2.990756,1.828741 -4.667105,1.295358 L 72.31637,78.98366 c -2.552618,1.962089 -5.371932,3.600335 -8.381734,4.838548 l -2.381175,10.877205 c -0.380989,1.733497 -1.714445,3.105054 -3.466989,3.390791 -2.628819,0.438139 -5.333832,0.66673 -8.095995,0.66673 -2.762162,0 -5.46718,-0.228591 -8.095995,-0.66673 -1.752544,-0.285737 -3.086004,-1.657294 -3.466993,-3.390791 L 36.046319,83.822209 C 33.036511,82.583996 30.217203,80.94575 27.66458,78.983661 L 17.073114,82.37445 c -1.676346,0.533384 -3.543186,0.05716 -4.667102,-1.295357 C 10.86301,79.212253 9.4533552,77.231118 8.1960962,75.13568 L 7.3007728,73.592678 C 6.1387631,71.497245 5.1291427,69.325615 4.2909704,67.058736 3.68139,65.401437 4.195721,63.553644 5.5101311,62.372584 l 8.2483899,-7.505462 c -0.209546,-1.600148 -0.323842,-3.219349 -0.323842,-4.857595 0,-1.638252 0.114296,-3.257448 0.323842,-4.83855 L 5.5101311,37.665515 C 4.195721,36.484454 3.68139,34.636661 4.2909704,32.979362 5.1291427,30.712484 6.1387631,28.540854 7.3007728,26.445417 l 0.8953234,-1.542998 c 1.257259,-2.095437 2.6669138,-4.076573 4.2099158,-5.943413 1.123916,-1.371555 2.990756,-1.828745 4.667102,-1.295358 l 10.610518,3.371744 c 2.552617,-1.962089 5.371931,-3.600337 8.381733,-4.838549 L 38.446541,5.3196386 c 0.380988,-1.7334963 1.714445,-3.1050519 3.466988,-3.390795 2.62882,-0.4571852 5.333832,-0.6857778 8.095995,-0.6857778 2.762164,0 5.467181,0.2285926 8.095996,0.6667307 1.752543,0.2857386 3.086004,1.6572943 3.466992,3.3907905 l 2.381171,10.877205 c 3.009807,1.238212 5.829116,2.876459 8.381738,4.838548 l 10.610514,-3.371742 c 1.676346,-0.533384 3.54319,-0.05715 4.667102,1.295357 1.543002,1.866845 2.952656,3.847981 4.209914,5.943413 l 0.895327,1.543002 c 1.162015,2.095433 2.171626,4.267067 3.009805,6.533941 z M 50.009524,65.249042 a 15.239519,15.239519 0 1 0 0,-30.479036 15.239519,15.239519 0 1 0 0,30.479036 z" id="path1" style="stroke-width:0.190494" />
+            </g>
+          </svg>
+        </button>
+        <div id="settingsChooserDropdownContent">
+          <button id="showStyleSettingsBtn" class="" type"button">Style Settings</button>
+          <button id="showDateTimeSettingsBtn" class="" type"button">Date/Time Settings</button>
+          <button id="showWeatherSettingsBtn" class="" type"button">Weather Settings</button>
+          <button id="showSearchSettingsBtn" class="" type"button">Search Settings</button>
+          <button id="showBookmarksSettingsBtn" class="" type"button">Bookmark Settings</button>
         </div>
       </div>
+
+      <!-- Information Module -->
+      <div id="infoModule">
+        <div id=datetimeWidget>
+          <div id="dateTimeLine1">00:00:00</div>
+          <div id="dateTimeLine2">00JAN00</div>
+        </div>
+      </div>
+      <dialog id="dateTimeSettingsDialog">
+        <button class="closePopupBtn colorModBtn" type="button">
+          <svg viewBox="0 0 100 100" version="1.1" class="closePopupBtnSvg" sodipodi:docname="xmark-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <g id="" class="closePopupBtnSvgProps colorModBtnProps">
+              <path d="m 95.752247,17.979501 c 3.797499,-3.797497 3.797499,-9.9646321 0,-13.7621295 -3.797495,-3.79749968 -9.96463,-3.79749968 -13.762133,0 L 49.999998,36.237869 17.979502,4.2477492 c -3.797498,-3.79749736 -9.9646337,-3.79749736 -13.762131,0 -3.79749902,3.7974974 -3.79749902,9.9646328 0,13.7621288 L 36.23787,50 4.2477495,82.020499 c -3.7974975,3.797502 -3.7974975,9.964638 0,13.762125 3.7974974,3.797506 9.9646325,3.797506 13.7621295,0 L 49.999998,63.762129 82.020499,95.752247 c 3.797494,3.797499 9.96463,3.797499 13.762125,0 3.797506,-3.797488 3.797506,-9.964623 0,-13.762125 L 63.762131,50 Z" id="path1" style="stroke-width:0.303799" />
+            </g>
+          </svg>
+        </button>
+
+        <h4>Time / Date Format</h4>
+        <input id="dateTimeLine1Input" type="text" placeholder="Line 1">
+        <input id="dateTimeLine2Input" type="text" placeholder="Line 2">
+        <button id="dateTimeSaveBtn" class="colorModBtn" type="button">
+          <svg viewBox="0 0 100 100" version="1.1" id="saveBtnSvg" sodipodi:docname="floppy-disk-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <g id="saveBtnSvgProps" class="colorModBtnProps">
+              <path d="m 15.465486,1.6516795 c -7.6191779,0 -13.8138065,6.1946286 -13.8138065,13.8138065 V 84.53452 c 0,7.619173 6.1946286,13.8138 13.8138065,13.8138 h 69.069029 c 7.619177,0 13.813805,-6.194627 13.813805,-13.8138 V 32.149974 c 0,-3.669293 -1.446133,-7.187496 -4.03622,-9.777586 L 77.627612,5.6879008 C 75.037524,3.0978126 71.519319,1.6516795 67.850027,1.6516795 Z m 0,20.7207075 c 0,-3.820379 3.086522,-6.906901 6.906901,-6.906901 h 41.441418 c 3.820381,0 6.906903,3.086522 6.906903,6.906901 v 13.813807 c 0,3.820381 -3.086522,6.906903 -6.906903,6.906903 H 22.372387 c -3.820379,0 -6.906901,-3.086522 -6.906901,-6.906903 z M 50,56.906903 a 13.813809,13.813809 0 1 1 0,27.627617 13.813809,13.813809 0 1 1 0,-27.627617 z" id="path1" style="stroke-width:0.21584" />
+            </g>
+          </svg>
+        </button>
+        <!-- Insert Date Time Format Options -->
+        <table>
+          <tr> <td>d</td> <td>Day of Month - (4)</td> </tr>
+          <tr> <td>dd</td> <td>Day of Month - Leading 0(04)</td> </tr>
+          <tr> <td>ddd</td> <td>Day of Week - 3 Letter(Thu)</td> </tr>
+          <tr> <td>dddd</td> <td>Day of Week - (Thursday)</td> </tr>
+          <tr> <td>M</td> <td>Month - Number (4)</td> </tr>
+          <tr> <td>MM</td> <td>Month - Number Leading 0 (04)</td> </tr>
+          <tr> <td>MMM</td> <td>Month - 3 Letter (Apr)</td> </tr>
+          <tr> <td>MMMM</td> <td>Month - (April)</td> </tr>
+          <tr> <td>y</td> <td>Year - 2 Digit (24)</td> </tr>
+          <tr> <td>yy</td> <td>Year - (2024)</td> </tr>
+        </table>
+        <table>
+          <tr> <td>h</td> <td>Hour - 12 Hour (5)</td> </tr>
+          <tr> <td>hh</td> <td>Hour - 12 Hour Leading 0 (05)</td> </tr>
+          <tr> <td>H</td> <td>Hour - 24 Hour (5)</td> </tr>
+          <tr> <td>HH</td> <td>Hour - 24 Hour (05)</td> </tr>
+          <tr> <td>m</td> <td>Minute - (5)</td> </tr>
+          <tr> <td>mm</td> <td>Minute - Leading 0 (05)</td> </tr>
+          <tr> <td>s</td> <td>Second - (5)</td> </tr>
+          <tr> <td>ss</td> <td>Second - Leading 0 (05)</td> </tr>
+          <tr> <td>t</td> <td>Time Marker - 1 Letter (A or P)</td> </tr>
+          <tr> <td>tt</td> <td>Time Marker - 2 Letter (AM or PM)</td> </tr>
+        </table>
+      </dialog>
+
 
       <!-- Search Module -->
       <div id="searchModule">
         <form id="searchUrl" method="get" action="https://search.brave.com/search?q={}">
           <input id="searchInput" type="text" placeholder="Web Search" name="q" value="" />
         </form>
-        <div id="searchDropdown">
-          <button id="searchEngineBtn" class="generalButton" type="button">
-            <svg viewBox="0 0 100 100" version="1.1" id="searchEngineBtnSvg" sodipodi:docname="caret-down-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g id="searchEngineBtnSvgProps" class="colorNormBtnProps">
-                <path d="m 43.18998,76.101104 c 3.764763,3.764764 9.878738,3.764764 13.643502,0 L 95.38466,37.549927 c 2.770867,-2.770865 3.584049,-6.897045 2.078152,-10.511219 -1.505908,-3.614172 -4.999609,-5.963385 -8.914964,-5.963385 l -77.102354,0.03012 c -3.8852365,0 -7.409055,2.349213 -8.9149603,5.963386 C 1.0246283,30.683 1.8679353,34.80918 4.608683,37.580045 l 38.551179,38.551178 z" id="path1" style="stroke-width:0.301181" />
-              </g>
-            </svg>
-          </button>
-          <div id="searchDropdownContent">
-            <button id="braveSearch" class="dropdownBtn" type="button">Brave</button>
-            <button id="startpageSearch" class="dropdownBtn" type="button">Startpage</button>
-            <button id="duckduckgoSearch" class="dropdownBtn" type="button">DuckDuckGo</button>
-            <button id="googleSearch" class="dropdownBtn" type="button">Google</button>
-            <button id="bingSearch" class="dropdownBtn" type="button">Bing</button>
-          </div>
-        </div>
       </div>
+      <dialog id="searchSettingsDialog">
+        <button class="closePopupBtn colorModBtn" type="button">
+          <svg viewBox="0 0 100 100" version="1.1" class="closePopupBtnSvg" sodipodi:docname="xmark-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <g id="" class="closePopupBtnSvgProps colorModBtnProps">
+              <path d="m 95.752247,17.979501 c 3.797499,-3.797497 3.797499,-9.9646321 0,-13.7621295 -3.797495,-3.79749968 -9.96463,-3.79749968 -13.762133,0 L 49.999998,36.237869 17.979502,4.2477492 c -3.797498,-3.79749736 -9.9646337,-3.79749736 -13.762131,0 -3.79749902,3.7974974 -3.79749902,9.9646328 0,13.7621288 L 36.23787,50 4.2477495,82.020499 c -3.7974975,3.797502 -3.7974975,9.964638 0,13.762125 3.7974974,3.797506 9.9646325,3.797506 13.7621295,0 L 49.999998,63.762129 82.020499,95.752247 c 3.797494,3.797499 9.96463,3.797499 13.762125,0 3.797506,-3.797488 3.797506,-9.964623 0,-13.762125 L 63.762131,50 Z" id="path1" style="stroke-width:0.303799" />
+            </g>
+          </svg>
+        </button>
+        <input id="" type="text" placeholder="">
+        <button id="braveSearch" class="dropdownBtn" type="button">Brave</button>
+        <button id="startpageSearch" class="dropdownBtn" type="button">Startpage</button>
+        <button id="duckduckgoSearch" class="dropdownBtn" type="button">DuckDuckGo</button>
+        <button id="googleSearch" class="dropdownBtn" type="button">Google</button>
+        <button id="bingSearch" class="dropdownBtn" type="button">Bing</button>
+      </dialog>
+
 
       <!-- Bookmarks Module -->
 
@@ -69,9 +124,10 @@
     </div> <!-- END MAIN BODY -->
 
   </body>
+  <script src="./js/general.js"></script>
   <!-- <script src="./js/style.js"></script> -->
   <!-- <script src="./js/weather.js"></script> -->
   <script src="./js/search.js"></script>
   <!-- <script src="./js/bookmarks.js"></script> -->
-  <script src="./js/clock.js"></script>
+  <script src="./js/datetime.js"></script>
 </html>

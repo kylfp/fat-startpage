@@ -1,6 +1,6 @@
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
-  init();
+  initDateTime();
 });
 
 document.getElementById('showDateTimeSettingsBtn').addEventListener('click', () => {
@@ -11,15 +11,25 @@ document.getElementById('showDateTimeSettingsBtn').addEventListener('click', () 
 //   dateTimeSettingsDialog.close();
 // });
 
+document.getElementById('dateTimeSaveBtn').addEventListener('click', () => {
+  line1Input = document.getElementById('dateTimeLine1Input');
+  line2Input = document.getElementById('dateTimeLine2Input');
+  let dateTimeSettings = {
+    line1: line1Input.value,
+    line2: line2Input.value,
+  }
+  saveDateTime(dateTimeSettings);
+})
+
 // Required Skeleton Methods
-function init() {
+function initDateTime() {
   if(localStorage.getItem('dateTimeSettings') === null) {
     console.info('INFO: Default Clock Settings')
     let dateTimeSettings = {
       line1: 'HH:mm:ss',
       line2: 'yy-MM-dd',
     }
-    save(dateTimeSettings);
+    saveDateTime(dateTimeSettings);
   }
   else {
     console.info('INFO: User Clock Settings')
@@ -28,13 +38,13 @@ function init() {
   showClock();
 }
 
-function save(dateTimeSettings) {
+function saveDateTime(dateTimeSettings) {
   localStorage.setItem('dateTimeSettings', JSON.stringify(dateTimeSettings));
-  console.info('INFO: Date/Time Settings Updated');
+  console.info('INFO: Date/Time Settings Saved');
 }
 
 // MIGHT NOT BE NEEDED FOR CLOCK
-// function update() {
+// function updateDateTime(line1, line2) {
 //   console.info('INFO: Date/Time Settings Changed');
 //
 //   setInterval(showClock, 1000);

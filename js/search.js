@@ -1,73 +1,56 @@
+// Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
-  init();
+  initSearch();
 });
 
-document.getElementById('searchEngineBtn').addEventListener('click', () => {
-  let dropdown = document.getElementById('searchDropdownContent');
-  dropdown.style.display = dropdown.style.display == 'block' ? 'none' : 'block';
+document.getElementById('showSearchSettingsBtn').addEventListener('click', () => {
+  searchSettingsDialog.showModal();
 });
 
 document.getElementById('braveSearch').addEventListener('click', () => {
-  save('brave');
-  update();
+  saveSearch('brave');
+  updateSearch();
 });
 
 document.getElementById('startpageSearch').addEventListener('click', () => {
-  save('startpage');
-  update();
+  saveSearch('startpage');
+  updateSearch();
 });
 
 document.getElementById('googleSearch').addEventListener('click', () => {
-  save('google');
-  update();
+  saveSearch('google');
+  updateSearch();
 });
 
 document.getElementById('duckduckgoSearch').addEventListener('click', () => {
-  save('duckduckgo');
-  update();
+  saveSearch('duckduckgo');
+  updateSearch();
 });
 
 document.getElementById('bingSearch').addEventListener('click', () => {
-  save('bing');
-  update();
+  saveSearch('bing');
+  updateSearch();
 });
 
-function init() {
+// Required Skeleton Methods
+function initSearch() {
   if(localStorage.getItem('searchEng') === null) {
     console.info('INFO: Default Search Settings')
-    save('brave');
+    saveSearch('brave');
   }
   else {
     console.info('INFO: User Search Settings')
   }
-  update();
+  updateSearch();
 }
 
-const searchEngines = {
-  brave: [
-    'Brave', 'https://search.brave.com/search?q={}',
-  ],
-  startpage: [
-    'Startpage', 'https://www.startpage.com/sp/search?q={}',
-  ],
-  google: [
-    'Google', 'https://www.google.com/search?q={}',
-  ],
-  duckduckgo: [
-    'DuckDuckGo', 'https://duckduckgo.com/?t=h_&q={}',
-  ],
-  bing: [
-    'Bing', 'https://www.bing.com/search?q={}',
-  ],
-}
-
-function save(searchEngine) {
+function saveSearch(searchEngine) {
   let searchEng = [searchEngine,];
   localStorage.setItem('searchEng', JSON.stringify(searchEng));
-  console.info('INFO: Search Settings Updated - ' + searchEngine);
+  console.info('INFO: Search Settings Saved - ' + searchEngine);
 }
 
-function update() {
+function updateSearch() {
   let searchEng = JSON.parse(localStorage.getItem('searchEng'));
   console.info('INFO: Search Engine Changed - ' + searchEng[0]);
   const searchUrl = document.getElementById('searchUrl');
@@ -94,4 +77,23 @@ function update() {
       searchInput.placeholder = searchEngines.bing[0] + ' Search';
       break;
   }
+}
+
+// Helper Methods/Consts
+const searchEngines = {
+  brave: [
+    'Brave', 'https://search.brave.com/search?q={}',
+  ],
+  startpage: [
+    'Startpage', 'https://www.startpage.com/sp/search?q={}',
+  ],
+  google: [
+    'Google', 'https://www.google.com/search?q={}',
+  ],
+  duckduckgo: [
+    'DuckDuckGo', 'https://duckduckgo.com/?t=h_&q={}',
+  ],
+  bing: [
+    'Bing', 'https://www.bing.com/search?q={}',
+  ],
 }
