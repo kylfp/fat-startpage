@@ -16,6 +16,7 @@ Version 1 had its fair share of glitches and shortcommings as it was mostly a pr
   - [ ] Add theme presets (page layout and color theme)
   - [ ] Allow variable number of bookmark categories (This will only with with the og fat-startpage type layout)
   - [x] Allow for user formatted date/time
+  - [x] Add unit choices for weather
   - [x] Fix timezone issues with sunset/sunrise only showing in EST
   - [x] Add alternate page style options (Bento,etc.)
 
