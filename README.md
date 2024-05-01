@@ -1,14 +1,15 @@
-<h1 align="center">
+<h1 align="left">
 Fat Startpage
 </h1>
 
-<p align="center">
+<p align="left">
 Fat Startpage is a side project created out of frustrations with similar "aesthetic" home/start pages. The goal was to create something that could be easly modified to match your desktops color theme from a graphical interface as opposed to messing with CSS every time I changed something up.
 </p>
 
+<h2 align="left">
+Version 2 is under development!
+</h2>
 
-## Objectives for V2:
-
-  - [ ] Fix timezone issue with sunrise/set (currently locked to EST regardless of location)
-  - [ ] User can add and subtract categories
-  - [ ] Improve styling to add font options, color fill to boxes, and drop shadow
+<p align="left">
+Please check the "Version-2" branch for latest updates!
+</p>
