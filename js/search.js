@@ -7,29 +7,36 @@ document.getElementById('showSearchSettingsBtn').addEventListener('click', () =>
   searchSettingsDialog.showModal();
 });
 
-document.getElementById('braveSearch').addEventListener('click', () => {
-  saveSearch('brave');
+document.getElementById('searchSettingsSaveBtn').addEventListener('click', () => {
+  let searchSettingsInput = document.getElementById('searchSettingsInput');
+  saveSearch(searchSettingsInput.value);
   updateSearch();
+  searchSettingsInput.value = '';
+});
+
+document.getElementById('braveSearch').addEventListener('click', () => {
+  let searchSettingsInput = document.getElementById('searchSettingsInput');
+  searchSettingsInput.value = 'brave'
 });
 
 document.getElementById('startpageSearch').addEventListener('click', () => {
-  saveSearch('startpage');
-  updateSearch();
+  let searchSettingsInput = document.getElementById('searchSettingsInput');
+  searchSettingsInput.value = 'startpage'
 });
 
 document.getElementById('googleSearch').addEventListener('click', () => {
-  saveSearch('google');
-  updateSearch();
+  let searchSettingsInput = document.getElementById('searchSettingsInput');
+  searchSettingsInput.value = 'google'
 });
 
 document.getElementById('duckduckgoSearch').addEventListener('click', () => {
-  saveSearch('duckduckgo');
-  updateSearch();
+  let searchSettingsInput = document.getElementById('searchSettingsInput');
+  searchSettingsInput.value = 'duckduckgo'
 });
 
 document.getElementById('bingSearch').addEventListener('click', () => {
-  saveSearch('bing');
-  updateSearch();
+  let searchSettingsInput = document.getElementById('searchSettingsInput');
+  searchSettingsInput.value = 'bing'
 });
 
 // Required Skeleton Methods
@@ -44,11 +51,13 @@ function initSearch() {
   updateSearch();
 }
 
+
 function saveSearch(searchEngine) {
-  let searchEng = [searchEngine,];
+  let searchEng = [searchEngine];
   localStorage.setItem('searchEng', JSON.stringify(searchEng));
   console.info('INFO: Search Settings Saved - ' + searchEngine);
 }
+
 
 function updateSearch() {
   let searchEng = JSON.parse(localStorage.getItem('searchEng'));
@@ -76,8 +85,12 @@ function updateSearch() {
       searchUrl.action = searchEngines.bing[1];
       searchInput.placeholder = searchEngines.bing[0] + ' Search';
       break;
+    default:
+      searchUrl.action = searchEng[0];
+      searchInput.placeholder = 'Web Search'
   }
 }
+
 
 // Helper Methods/Consts
 const searchEngines = {

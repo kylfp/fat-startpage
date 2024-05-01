@@ -31,12 +31,11 @@
         </div>
       </div>
 
-      <!-- Information Module -->
-      <div id="infoModule">
-        <div id=datetimeWidget>
-          <div id="dateTimeLine1">00:00:00</div>
-          <div id="dateTimeLine2">00JAN00</div>
-        </div>
+
+      <!-- Date Time Module -->
+      <div id=datetimeWidget>
+        <div id="dateTimeLine1">00:00:00</div>
+        <div id="dateTimeLine2">00JAN00</div>
       </div>
       <dialog id="dateTimeSettingsDialog">
         <button class="closePopupBtn colorModBtn" type="button">
@@ -85,6 +84,15 @@
       </dialog>
 
 
+      <!-- Weather Module -->
+      <div id="weatherWidget">
+        <div id="temp"></div>
+        <div id="weatherDescription"></div>
+      </div>
+      <dialog id="weatherSettingsDialog">
+      </dialog>
+
+
       <!-- Search Module -->
       <div id="searchModule">
         <form id="searchUrl" method="get" action="https://search.brave.com/search?q={}">
@@ -99,27 +107,24 @@
             </g>
           </svg>
         </button>
-        <input id="" type="text" placeholder="">
+        <input id="searchSettingsInput" type="text" placeholder="">
         <button id="braveSearch" class="dropdownBtn" type="button">Brave</button>
         <button id="startpageSearch" class="dropdownBtn" type="button">Startpage</button>
         <button id="duckduckgoSearch" class="dropdownBtn" type="button">DuckDuckGo</button>
         <button id="googleSearch" class="dropdownBtn" type="button">Google</button>
         <button id="bingSearch" class="dropdownBtn" type="button">Bing</button>
+        <button id="searchSettingsSaveBtn" class="colorModBtn" type="button">
+          <svg viewBox="0 0 100 100" version="1.1" id="saveBtnSvg" sodipodi:docname="floppy-disk-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <g id="saveBtnSvgProps" class="colorModBtnProps">
+              <path d="m 15.465486,1.6516795 c -7.6191779,0 -13.8138065,6.1946286 -13.8138065,13.8138065 V 84.53452 c 0,7.619173 6.1946286,13.8138 13.8138065,13.8138 h 69.069029 c 7.619177,0 13.813805,-6.194627 13.813805,-13.8138 V 32.149974 c 0,-3.669293 -1.446133,-7.187496 -4.03622,-9.777586 L 77.627612,5.6879008 C 75.037524,3.0978126 71.519319,1.6516795 67.850027,1.6516795 Z m 0,20.7207075 c 0,-3.820379 3.086522,-6.906901 6.906901,-6.906901 h 41.441418 c 3.820381,0 6.906903,3.086522 6.906903,6.906901 v 13.813807 c 0,3.820381 -3.086522,6.906903 -6.906903,6.906903 H 22.372387 c -3.820379,0 -6.906901,-3.086522 -6.906901,-6.906903 z M 50,56.906903 a 13.813809,13.813809 0 1 1 0,27.627617 13.813809,13.813809 0 1 1 0,-27.627617 z" id="path1" style="stroke-width:0.21584" />
+            </g>
+          </svg>
+        </button>
       </dialog>
 
 
       <!-- Bookmarks Module -->
 
-      <!-- Settings Module -->
-      <dialog id="settings-module">
-        <button class="closePopupBtn colorModBtn" type="button">
-          <svg viewBox="0 0 100 100" version="1.1" class="closePopupBtnSvg" sodipodi:docname="xmark-solid.svg" width="100" height="100" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-            <g id="" class="closePopupBtnSvgProps colorModBtnProps">
-              <path d="m 95.752247,17.979501 c 3.797499,-3.797497 3.797499,-9.9646321 0,-13.7621295 -3.797495,-3.79749968 -9.96463,-3.79749968 -13.762133,0 L 49.999998,36.237869 17.979502,4.2477492 c -3.797498,-3.79749736 -9.9646337,-3.79749736 -13.762131,0 -3.79749902,3.7974974 -3.79749902,9.9646328 0,13.7621288 L 36.23787,50 4.2477495,82.020499 c -3.7974975,3.797502 -3.7974975,9.964638 0,13.762125 3.7974974,3.797506 9.9646325,3.797506 13.7621295,0 L 49.999998,63.762129 82.020499,95.752247 c 3.797494,3.797499 9.96463,3.797499 13.762125,0 3.797506,-3.797488 3.797506,-9.964623 0,-13.762125 L 63.762131,50 Z" id="path1" style="stroke-width:0.303799" />
-            </g>
-          </svg>
-        </button>
-      </dialog>
 
     </div> <!-- END MAIN BODY -->
 

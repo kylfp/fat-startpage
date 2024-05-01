@@ -31,11 +31,15 @@ const getLocation = () => {
 
 const getWeather = async (weatherSettings) => {
   const response = await fetch(
+    
+
+
     `https://api.open-meteo.com/v1/forecast?latitude=${weatherSettings.latitude}&longitude=` +
-    `${weatherSettings.longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,we` +
-    'ather_code,wind_speed_10m,wind_direction_10m&daily=temperature_2m_max,temperature_2m_min,su' +
-    `nrise,sunset${weatherSettings.tempUnit}${weatherSettings.windUnit}${weatherSettings.precipUnit}&timezone=auto`
+    `${weatherSettings.longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperatu` +
+    're,weather_code,wind_speed_10m,wind_direction_10m&daily=temperature_2m_max,temperature_2m_m' +
+    `in,sunrise,sunset${weatherSettings.tempUnit}${weatherSettings.windUnit}${weatherSettings.precipUnit}&timezone=auto`
   );
+  const 
 
   // let weatherData = JSON.parse(JSON.stringify(await response.json()));
   let weatherData = await response.json();

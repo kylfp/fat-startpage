@@ -19,6 +19,8 @@ document.getElementById('dateTimeSaveBtn').addEventListener('click', () => {
     line2: line2Input.value,
   }
   saveDateTime(dateTimeSettings);
+  line1Input.value = '';
+  line2Input.value = '';
 })
 
 // Required Skeleton Methods
@@ -64,18 +66,13 @@ function showClock() {
 // Helper Methods/Consts
 function formatCustomDate(date, customFormat) {
   const second = date.getSeconds();
-
   const minute = date.getMinutes();
-
   const hour24 = date.getHours();
   const hour12 = milTimeConv(hour24); // USR
   const dnIndicator = getAmPm(hour24); // USR
-
   const day = date.getDate();
   const dayOfWeek = date.getDay();
-
   const month = date.getMonth();
-
   const year = date.getFullYear();
 
   const formattedDate = customFormat
@@ -104,8 +101,7 @@ function formatCustomDate(date, customFormat) {
 
 function numToMonth3(month) {
   let monthList = [
-    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT",
-    "NOV", "DEC"
+    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
   ]
   return monthList[month];
 }
@@ -124,10 +120,7 @@ function numToWeek3(dayOfWeek) {
 }
 
 function numToWeekFull(dayOfWeek) {
-  let weekList = [
-    'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
-    'Saturday'
-  ]
+  let weekList = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ]
   return weekList[dayOfWeek];
 }
 
