@@ -31,9 +31,6 @@ const getLocation = () => {
 
 const getWeather = async (weatherSettings) => {
   const response = await fetch(
-    
-
-
     `https://api.open-meteo.com/v1/forecast?latitude=${weatherSettings.latitude}&longitude=` +
     `${weatherSettings.longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperatu` +
     're,weather_code,wind_speed_10m,wind_direction_10m&daily=temperature_2m_max,temperature_2m_m' +

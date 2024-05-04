@@ -52,22 +52,51 @@ async function getWeather() {
               weatherSettings.impWindSpeedUnit, weatherSettings.impPrecipUnit)
   );
   let weatherJSON = JSON.parse(await response.json());
-  return weatherJSON;
-}
 
-function formatWeather(weatherJSON) {
-  let weatherData = {
-    temp: weatherJSON.current_weather.temperature + "°F",
-    weatherCode: translateCode(weatherJSON.current_weather.weathercode)[0],
-    feelsLike: weatherJSON.hourly.apparent_temperature[time.getHours()] + "°F",
-    highTemp: weatherJSON.daily.temperature_2m_max[0] + "°F",
-    lowTemp: weatherJSON.daily.temperature_2m_min[0] + "°F",
-    humidity: weatherJSON.hourly.relativehumidity_2m[time.getHours()] + "%",
-    windSpeed: weatherJSON.current_weather.windspeed + "mph",
-    windDirection: translateCompass(weatherJSON.current_weather.winddirection),
-    sunrise: weatherJSON.daily.sunrise[0],
-    sunset: weatherJSON.daily.sunset[0],
+  const weatherCodes = {
+    0:  ['Clear Sky',              'clearDay',      'clearNight'],
+    1:  ['Mostly Clear',           'partlyCloudy',  'clearNight'],
+    2:  ['Partly Cloudy',          'partlyCloudy',  'cloudyNight'],
+    3:  ['Overcast',               'overcast',      'cloudyNight'],
+    45: ['Foggy',                  'foggyDay',      'foggyNight'],
+    48: ['Rime Fog',               'FoggyDay',      'foggyNight'],
+    51: ['Light Drizzle',          'drizzle'],
+    53: ['Moderate Drizzle',       'drizzle'],
+    55: ['Dense Drizzle',          'drizzle'],
+    56: ['Light Freezing Drizzle', 'drizzle'],
+    57: ['Dense Freezing Drizzle', 'drizzle'],
+    61: ['Slight Rain',            'moderateRain'],
+    63: ['Moderate Rain',          'moderateRain'],
+    65: ['Heavy Rain',             'moderateRain'],
+    66: ['Light Freezing Rain',    'moderateRain'],
+    67: ['Heavy Freezing Rain',    'moderateRain'],
+    71: ['Slight Snowfall',        'snow'],
+    73: ['Moderate Snowfall',      'snow'],
+    75: ['Heavy Snowfall',         'snow'],
+    77: ['Snow Gains',             'snow'],
+    80: ['Slight Rain Showers',    'heavyRain'],
+    81: ['Moderate Rains Showers', 'heavyRain'],
+    82: ['Violent Rain Showers',   'heavyRain'],
+    85: ['Slight Snow Showers',    'snow'],
+    86: ['Heavy Snow Showers',     'snow'],
+    95: ['Slight Thunderstorms',   'thunderstorm'],
+    96: ['Moderate Thunderstorms', 'thunderstorm'],
+    99: ['Hail Thunderstorms',     'thunderstorm'],
   }
+
+  let weatherData = {
+    temp: `${weatherJSON.current.temperature_2m}${weatherJSON.current_units.temperature_2m}`,
+    apparentTemp: `${weatherJSON.current.apparent_temperature}${weatherJSON.current_units.apparent_temperature}`,
+    highTemp: `${weatherJSON.daily.temperature_2m_max[0]}${weatherJSON.daily_units.temperature_2m_max}`,
+    minTemp: `${weatherJSON.daily.temperature_2m_min[0]}${weatherJSON.daily_units.temperature_2m_min}`,
+    humidity: `${weatherJSON.current.relative_humidity_2m}${weatherJSON.current_units.relative_humidity_2m}`,
+    weatherCode: weatherJSON.current.weather_code,
+    windSpeed: `${weatherJSON.current.wind_speed_10m}${weatherJSON.current_units.wind_speed_10m}`,
+    windDirection: weatherJSON.current.wind_direction_10m,
+    sunrise: weatherJSON.daily.sunrise[0].slice(11),
+    sunrise: weatherJSON.daily.sunset[0].slice(11),
+  }
+
   return weatherData;
 }
 
@@ -110,4 +139,35 @@ function resetWeatherIcons() {
   for (let i=0; i<weatherIcons; i++) {
     weatherIcons[i].style.display = 'none';
   }
+}
+
+const weatherCodes = {
+  0:  ['Clear Sky',              'clearDay',      'clearNight'],
+  1:  ['Mostly Clear',           'partlyCloudy',  'clearNight'],
+  2:  ['Partly Cloudy',          'partlyCloudy',  'cloudyNight'],
+  3:  ['Overcast',               'overcast',      'cloudyNight'],
+  45: ['Foggy',                  'foggyDay',      'foggyNight'],
+  48: ['Rime Fog',               'FoggyDay',      'foggyNight'],
+  51: ['Light Drizzle',          'drizzle'],
+  53: ['Moderate Drizzle',       'drizzle'],
+  55: ['Dense Drizzle',          'drizzle'],
+  56: ['Light Freezing Drizzle', 'drizzle'],
+  57: ['Dense Freezing Drizzle', 'drizzle'],
+  61: ['Slight Rain',            'moderateRain'],
+  63: ['Moderate Rain',          'moderateRain'],
+  65: ['Heavy Rain',             'moderateRain'],
+  66: ['Light Freezing Rain',    'moderateRain'],
+  67: ['Heavy Freezing Rain',    'moderateRain'],
+  71: ['Slight Snowfall',        'snow'],
+  73: ['Moderate Snowfall',      'snow'],
+  75: ['Heavy Snowfall',         'snow'],
+  77: ['Snow Gains',             'snow'],
+  80: ['Slight Rain Showers',    'heavyRain'],
+  81: ['Moderate Rains Showers', 'heavyRain'],
+  82: ['Violent Rain Showers',   'heavyRain'],
+  85: ['Slight Snow Showers',    'snow'],
+  86: ['Heavy Snow Showers',     'snow'],
+  95: ['Slight Thunderstorms',   'thunderstorm'],
+  96: ['Moderate Thunderstorms', 'thunderstorm'],
+  99: ['Hail Thunderstorms',     'thunderstorm'],
 }
